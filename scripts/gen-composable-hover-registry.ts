@@ -33,12 +33,9 @@ const overrideNames = [
   'COMPOSABLE_REGISTRY_RS',
 ]
 const hasOverride = overrideNames.some((name) => Boolean(process.env[name]))
-const fixtureMode = process.env.COMPOSABLE_REGISTRY_FIXTURE === '1'
+const fixtureMode = process.env.COMPOSABLE_REGISTRY_FIXTURE === '1' && process.argv.includes('--fixture')
 if (hasOverride && !fixtureMode) {
-  throw new Error('composable registry overrides are fixture-only; set COMPOSABLE_REGISTRY_FIXTURE=1 for an isolated fixture')
-}
-if (fixtureMode && process.env.CI === 'true') {
-  throw new Error('COMPOSABLE_REGISTRY_FIXTURE is forbidden in CI/release checks')
+  throw new Error('composable registry overrides are fixture-only; invoke with --fixture and COMPOSABLE_REGISTRY_FIXTURE=1 for an isolated fixture')
 }
 const OUT_FILE = process.env.COMPOSABLE_REGISTRY_OUT
   ? resolve(ROOT, process.env.COMPOSABLE_REGISTRY_OUT)

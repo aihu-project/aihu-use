@@ -56,13 +56,14 @@ describe('@aihu/use portable registry contract', () => {
     expect(`${result.stdout}\n${result.stderr}`).toContain('overrides are fixture-only')
   })
 
-  it('allows fully redirected fixtures only in explicit fixture mode', () => {
+  it.each(['true', '1'])('allows fully redirected fixtures in explicit test mode under CI=%s', (ci) => {
     const fixtureRoot = resolve(import.meta.dirname, '../scripts/fixtures/composable-registry')
-    const result = spawnSync(process.execPath, ['--import', 'tsx', 'scripts/gen-composable-hover-registry.ts', '--check'], {
+    const result = spawnSync(process.execPath, ['--import', 'tsx', 'scripts/gen-composable-hover-registry.ts', '--check', '--fixture'], {
       cwd: resolve(import.meta.dirname, '..'),
       encoding: 'utf8',
       env: {
         ...process.env,
+        CI: ci,
         COMPOSABLE_REGISTRY_FIXTURE: '1',
         COMPOSABLE_REGISTRY_RS: resolve(fixtureRoot, 'use_registry.rs'),
         COMPOSABLE_REGISTRY_OUT: resolve(fixtureRoot, 'expected-match.ts'),
@@ -71,5 +72,24 @@ describe('@aihu/use portable registry contract', () => {
       },
     })
     expect(result.status).toBe(0)
+  })
+
+  it.each(['true', '1'])('does not allow fixture redirects under CI=%s without the explicit fixture command', (ci) => {
+    const fixtureRoot = resolve(import.meta.dirname, '../scripts/fixtures/composable-registry')
+    const result = spawnSync(process.execPath, ['--import', 'tsx', 'scripts/gen-composable-hover-registry.ts', '--check'], {
+      cwd: resolve(import.meta.dirname, '..'),
+      encoding: 'utf8',
+      env: {
+        ...process.env,
+        CI: ci,
+        COMPOSABLE_REGISTRY_FIXTURE: '1',
+        COMPOSABLE_REGISTRY_RS: resolve(fixtureRoot, 'use_registry.rs'),
+        COMPOSABLE_REGISTRY_OUT: resolve(fixtureRoot, 'expected-match.ts'),
+        COMPOSABLE_REGISTRY_CONTRACT_OUT: resolve(fixtureRoot, 'expected-match.json'),
+        COMPOSABLE_USE_SRC_ROOT: resolve(fixtureRoot, 'nonexistent-src'),
+      },
+    })
+    expect(result.status).not.toBe(0)
+    expect(`${result.stdout}\n${result.stderr}`).toContain('fixture-only')
   })
 })

@@ -109,7 +109,7 @@ describe('release artifact and branch gates', () => {
     writeFileSync(injected, 'export const injected = true\n')
     const result = spawnSync(process.execPath, [releaseManifestGate], {
       cwd: root,
-      env: { ...process.env, PACK_ROOT: dir },
+      env: { ...process.env, CI: '0', GITHUB_ACTIONS: '0', PACK_ROOT_TEST_MODE: '1', PACK_ROOT: dir },
       encoding: 'utf8',
     })
     expect(result.status).not.toBe(0)
@@ -152,10 +152,22 @@ describe('release artifact and branch gates', () => {
     writeFileSync(join(dir, 'dist/injected/nested.js'), 'export const injected = true\n')
     const result = spawnSync(process.execPath, [packGate], {
       cwd: root,
-      env: { ...process.env, PACK_ROOT: dir },
+      env: { ...process.env, CI: '0', GITHUB_ACTIONS: '0', PACK_ROOT_TEST_MODE: '1', PACK_ROOT: dir },
       encoding: 'utf8',
     })
     expect(result.status).not.toBe(0)
     expect(`${result.stdout}\n${result.stderr}`).toContain('release manifest drift')
+  })
+
+  it.each(['true', '1'])('fails closed for PACK_ROOT under CI=%s', (ci) => {
+    for (const script of [releaseManifestGate, packGate]) {
+      const result = spawnSync(process.execPath, [script], {
+        cwd: root,
+        env: { ...process.env, CI: ci, PACK_ROOT_TEST_MODE: '1', PACK_ROOT: root },
+        encoding: 'utf8',
+      })
+      expect(result.status).not.toBe(0)
+      expect(`${result.stdout}\n${result.stderr}`).toContain('PACK_ROOT is test-only')
+    }
   })
 })

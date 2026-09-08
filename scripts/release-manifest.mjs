@@ -3,8 +3,19 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-export const rootFor = (value = process.env.PACK_ROOT) =>
-  resolve(value ?? new URL('..', import.meta.url).pathname)
+const truthy = (value) => /^(?:1|true|yes|on)$/i.test(value ?? '')
+const restrictedExecution = () =>
+  truthy(process.env.CI) ||
+  truthy(process.env.GITHUB_ACTIONS) ||
+  truthy(process.env.RELEASE_TAG) ||
+  process.env.GITHUB_REF_TYPE === 'tag'
+
+export const rootFor = (value = process.env.PACK_ROOT) => {
+  if (value && (restrictedExecution() || process.env.PACK_ROOT_TEST_MODE !== '1')) {
+    throw new Error('PACK_ROOT is test-only and is forbidden in CI/release verification')
+  }
+  return resolve(value ?? new URL('..', import.meta.url).pathname)
+}
 
 const walk = (dir, prefix) => readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
   const path = `${prefix}/${entry.name}`
