@@ -1,0 +1,74 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: false
+
+env:
+  NPM_REGISTRY: https://registry.npmjs.org
+  RELEASE_DEFAULT_BRANCH: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout exact tagged commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+      - name: Setup Node without registry auth
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22.14.0
+          cache: npm
+      - name: Pin npm for trusted publishing
+        run: |
+          npm install --global npm@11.5.1
+          test "$(npm --version)" = 11.5.1
+      - name: Install dependencies without lifecycle scripts
+        run: npm install --ignore-scripts
+      - name: Validate exact reviewed tag and default branch
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: npm run check:release -- "$RELEASE_TAG"
+      - name: Refuse classic npm tokens
+        run: npm run check:oidc-auth
+      - name: Sanitize npm config before OIDC
+        run: |
+          release_npmrc="$(mktemp)"
+          : > "$release_npmrc"
+          {
+            echo "NPM_CONFIG_USERCONFIG=$release_npmrc"
+            echo "NPM_CONFIG_GLOBALCONFIG=$release_npmrc"
+          } >> "$GITHUB_ENV"
+      - name: Build, typecheck, test, and drift gates
+        run: |
+          npm run build
+          npm run typecheck
+          npm test
+          npm run check:registry-parity
+          npm run check:composable-registry
+      - name: Confirm registry returns E404 only
+        run: node scripts/assert-unpublished.mjs
+      - name: Verify exact archive and isolated consumer
+        run: |
+          npm run verify:pack
+          npm run consumer:smoke -- "$AIHU_PACK_PATH"
+      - name: Publish with OIDC provenance
+        env:
+          NODE_AUTH_TOKEN: ''
+          NPM_TOKEN: ''
+        run: env -u NODE_AUTH_TOKEN -u NPM_TOKEN npm publish "$AIHU_PACK_PATH" --access public --provenance --registry "$NPM_REGISTRY"

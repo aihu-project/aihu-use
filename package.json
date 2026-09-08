@@ -366,6 +366,10 @@
     "gen:composable-registry": "node --import tsx scripts/gen-composable-hover-registry.ts",
     "check:composable-registry": "node --import tsx scripts/gen-composable-hover-registry.ts --check",
     "check:registry-parity": "node --import tsx scripts/check-use-registry-parity.ts",
+    "verify:pack": "node scripts/verify-pack.mjs",
+    "consumer:smoke": "node scripts/consumer-smoke.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "check:oidc-auth": "node scripts/check-oidc-auth.mjs",
     "prepublishOnly": "npm run build"
   },
   "description": "aihu utility/sensor/state composables \u2014 SSR-safe, scope-aware, per-composable subpath entries.",
