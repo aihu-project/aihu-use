@@ -16,7 +16,7 @@
         "paths": ["src/**/*.ts", "src/composable-registry.ts", "composable-registry.json", "scripts/gen-composable-hover-registry.ts", "tests/composable-registry-contract.test.ts"],
         "keywords": ["COMPOSABLE_REGISTRY", "composable-registry.json", "schemaVersion", "COMPOSABLE_REGISTRY_OUT", "COMPOSABLE_REGISTRY_CONTRACT_OUT"],
         "docs": ["README.md"],
-        "note": "The generated TypeScript table and published JSON contract are parallel artifacts produced from source comments; codemap cannot follow generation or detect an output-only fixture override. The contract test exercises both equality and the fail-closed override path."
+        "note": "The generated TypeScript table and published JSON contract are parallel artifacts produced from source comments; codemap cannot follow generation or detect redirected fixture inputs. Production checks reject overrides, while the contract test uses an explicit fixture command for isolated data."
       },
       {
         "id": "manifest-parity-seam",

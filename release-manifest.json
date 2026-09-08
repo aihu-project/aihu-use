@@ -1,0 +1,1251 @@
+{
+  "schemaVersion": 1,
+  "name": "@aihu/use",
+  "version": "2.0.1",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha512": "fe541f5735765f0f3a4512b11c3f419a912380b3c8e46f45de3bd4641cc199261609f0929b9d1f39580f2efb2307c24e8a59bbd696b285874a96ab6995b487f6"
+    },
+    {
+      "path": "README.md",
+      "sha512": "26cc6b61ada1a5f8660ba4fdf82889d02355084c891595f513537a04be95f84ef1e76c196fc34939487eae96150f42052fefd0bc2b913ffd511dc36e2de02df8"
+    },
+    {
+      "path": "composable-registry.json",
+      "sha512": "440742f1ae2222810261e8a210721494880b6a95b350045649a4bb9e9b25339c58c91d6bbd53b5432d4090545f94fe48a74ac545fe3fe50001334404536b87ca"
+    },
+    {
+      "path": "dist/composed-tree-DwpMYGcW.js",
+      "sha512": "db555d6937368e832f676ee04652077b06fb8e9b6ce01a6e58466124ddedc445b8972fb4dbab73ebcdaa4bf86a22131daebd6eaa9884ec020c68d4d4b0e703d5"
+    },
+    {
+      "path": "dist/composed-tree-DwpMYGcW.js.map",
+      "sha512": "6b75f58fba120dee1d1e9e65761a7c0fd9f90946c11a4fbc39d1f06da99e3c8b6291ab44b1995b120e0a9b8c903bfe196e2979762b566bb85438f7e567697a24"
+    },
+    {
+      "path": "dist/index-CNA0_MAi.d.ts",
+      "sha512": "cbb3a806db30f9a54901aeb24e668a3a60eba154ed49d70c94900c04a2e2d7a0fc491e4c44cf8c6b81cebb55e0bd9e42583c6266672d2de2440d0e2fb4ca2d4a"
+    },
+    {
+      "path": "dist/index-CNA0_MAi.d.ts.map",
+      "sha512": "a9f934c9289f6b2c386ba6360143e3bc1501acc6324830d2850d4bfc937416accb7f341ff8e232e3455a1de21e9127b55158d6c471ad454b5f037caf998cc95e"
+    },
+    {
+      "path": "dist/index.d.ts",
+      "sha512": "3bfc6bac16b5b858b3e42037a823194840d7e8bf6330b07ac37b370b4d9b4bf813be75c67bb1e1d9e55f8b38d6b14f4c289e74bb9d3b46870a45aa3b89f72b2b"
+    },
+    {
+      "path": "dist/index.js",
+      "sha512": "aecebf9e7a70fe9c5cdef146dfd9005f36c93956ab7447cdb28ce241e3eb2e8c58e753ba24e215f80129f2e43c3728087e6c088e2dfb97fb5368666dd70eb26a"
+    },
+    {
+      "path": "dist/integrations/useJwt.d.ts",
+      "sha512": "66ba3d25d4d291023791a6d4424955f5b61bc688a6553d514ee24f88c867b028af8e379793298d8e81d48c6257b21bc9edbbd9e530cf2396f4ce763d372ce658"
+    },
+    {
+      "path": "dist/integrations/useJwt.d.ts.map",
+      "sha512": "1203a3fb1db6451fe7b9474cbada506f2ad7f06d8b5d5152c8db5a76db41f7e140248667a6e09669d9c3c0a95f076148bbc4ded1545c1aee035dbe5375b357bb"
+    },
+    {
+      "path": "dist/integrations/useJwt.js",
+      "sha512": "a22b847c23e97916d6daa976204dde5272f00a3c074e4e0f51cea9ed7c3928da98bfb947b632e8d505732c7573531b1a1cff4fd538c630e443b53869ff4a7f6b"
+    },
+    {
+      "path": "dist/integrations/useJwt.js.map",
+      "sha512": "e50ccb2b4a7d6610dc0f8b887be3a1d727d8e65154505ff9671bd402ad019d787e209b4df16a491d79bcbd6bf119b98ae311163e2d42c50b0f4c468243607fe4"
+    },
+    {
+      "path": "dist/math.d.ts",
+      "sha512": "ef7b48439b36385c6d6149cabc81faedbbf587428989785b66c0c59129784bab16847e2a7857963742023bdba79f295f83878c136ede218b4e2eeb006783da0b"
+    },
+    {
+      "path": "dist/math.js",
+      "sha512": "a8b2f843990ca9cb5747ad9e41596002a501dffc2f335cc3dfd0c1a87f63abf1ab89fbdfc42c57c141479ee1e56034d4b1f2abd51145f1f331cc1d23c84a49c6"
+    },
+    {
+      "path": "dist/math/useClamp.d.ts",
+      "sha512": "1aacc48aefd0ed0ca7fdab6105a256fe8eb3ad7d3e40128a5ef02dce74e3a7365f6188879415d1fe1479f42e4dc301475b089f9acec0ea5a6b1505684c4aaa45"
+    },
+    {
+      "path": "dist/math/useClamp.d.ts.map",
+      "sha512": "d02893cd72d3f36eac89cfe3f89ee92323973703f2093c2e6d898f610f7122a303ee3373aff80d75cc8e0e44ea0102daf49c07fad3bf9b0fe38da1ad0323f408"
+    },
+    {
+      "path": "dist/math/useClamp.js",
+      "sha512": "069f175b3e30493029128232ee14a643db33acf9fc4e7670b39fe26165f0b31e646b4bd9e66a62e48c54e56ff4e490cddcad22051f42f0d50b7ccde91dde607d"
+    },
+    {
+      "path": "dist/math/useClamp.js.map",
+      "sha512": "bb0ab0d0798f98220af2b9edc5fb699e613efceae4f5dd7426f4eee0aa6e585f161e8292a7c5bf82412c9d5d15f33305d598b28a437a4f4ec9e3866ffcd87822"
+    },
+    {
+      "path": "dist/motion.d.ts",
+      "sha512": "8cadf1d244e404b1a7dc38fb926aff3cb1941b14f9f1528e3ebc7cc09b80b432a59396346adec3b30fd4e1f4da6adfd9e841fca96d5f1eb53adc22cf368d2c0c"
+    },
+    {
+      "path": "dist/motion.js",
+      "sha512": "31b8313681f996217fc397ced44804a175f70beeacdfcbff2816d082d3b7d90933b10f133069ec8f5f65103e8d077e82e9f91ee84d42a8b37765e7dc9b53947c"
+    },
+    {
+      "path": "dist/motion/useCanvasSurface.d.ts",
+      "sha512": "3a42e39dc20e94025ff0c16231796d727435630ca62830ca8915903a754f723613764698098c8cb4f72eb21a699109292410e31116aea76e760f1fc0546c3ba8"
+    },
+    {
+      "path": "dist/motion/useCanvasSurface.d.ts.map",
+      "sha512": "a8f11ba552a2b1d22a91505000051812388e8655714dcf09a7a5850f485d8b65fae15417ab1fe3f2d43e13d8a4055eef820da88f9beb317c26d9cc1f9bbb11db"
+    },
+    {
+      "path": "dist/motion/useCanvasSurface.js",
+      "sha512": "e374114710e51d5b7dafbcf37ddc411accd100f7bd0434dbf39ff660dc321ae40d4160c26af3693a2c9d751b719068d742b5d4ebb42dcd17dca97d9bd672fd61"
+    },
+    {
+      "path": "dist/motion/useCanvasSurface.js.map",
+      "sha512": "c639fc5db231998883b752f3f67a2c7e8408c43c333b36efc0cc38674baece2c8e7367e062934e42058ccc86317904041389414381153865c4317a0451ebaf25"
+    },
+    {
+      "path": "dist/motion/useCharacterField.d.ts",
+      "sha512": "b940e9e731ef1558c056bb94c9a3acc6c84c254da188f32a297de88cd924d97d01bf66ce5e31d372b3a34418200d9d39538998ff43341ad71db09b76bd62fc9b"
+    },
+    {
+      "path": "dist/motion/useCharacterField.d.ts.map",
+      "sha512": "274d152b17ccf6350f33e0053290ecb743c1cf2afb4ff65c74ed299cfcb80f625a2322d29b402a35643f121cb0d5245d1682cf3b9e0d4e3a3f09efc2b3ea3cd5"
+    },
+    {
+      "path": "dist/motion/useCharacterField.js",
+      "sha512": "088ae950f8ac0907ad675858dbe80bde905b93a871f5c91c4808047503c44504afd733891d949aa0d98f180ef5bb8e2d693047d6092eb829fc7ff560b46237d8"
+    },
+    {
+      "path": "dist/motion/useCharacterField.js.map",
+      "sha512": "25cec7ec10242c8b84d4b37dc1341680943aa3e4e4473b093bd1e5efa3f170c469ea92fb174df39b2391d2e893c0a512bf238eba9ecc9b892046cb37396feebd"
+    },
+    {
+      "path": "dist/motion/useCountTo.d.ts",
+      "sha512": "14823a021a5b4e3681f48cf26d1d736123c41bbe3950154a2dcd87270707073de1721cd3c11b53389b91b0094950ffbe5cdda83542360fc4f873ec146a3d6506"
+    },
+    {
+      "path": "dist/motion/useCountTo.d.ts.map",
+      "sha512": "a7d98b037fbe94008da45eb52b098d21b7b8486649edaf19cd172af4bf2a7d06dc25d249973c5018f80dd5b01a0e0dcc20b9159558857ac4bfc37f53598088da"
+    },
+    {
+      "path": "dist/motion/useCountTo.js",
+      "sha512": "55f23f1a1eba3bd132fafed066f45607dbd23cf85c7a31507225b112fdd6b3f706245d9889c4d93fb08d05fd5ef5eabc63c3f1a7eafd0a3981b4cb11789e1fe9"
+    },
+    {
+      "path": "dist/motion/useCountTo.js.map",
+      "sha512": "32b5c1d5f0b8f54e82591bfa03a91dcc6e53861071f893240ec80612c64f916f59d4771b8be4fddffd6fb80a429efc09fff3dfebcb331e6fe7143a22a1e63b43"
+    },
+    {
+      "path": "dist/motion/useParticleField.d.ts",
+      "sha512": "a3bfe59367e79c865ae120ac9298b9f8e9b2ee14aa62f657356fb3b713a911421bccad9b19143ed85239fefee2a0b62884e9c5beef2a973e38a96a9cd742e1d6"
+    },
+    {
+      "path": "dist/motion/useParticleField.d.ts.map",
+      "sha512": "6e1f00c938886e558001181e57fd7a7a11b2dc21392fdf7aa35e6d33e5c2876786d24c651190321f688150776dc3b88e8771ff212973e44045f4c79b9727258e"
+    },
+    {
+      "path": "dist/motion/useParticleField.js",
+      "sha512": "e8c3a7f4d873fb6565a9f59e5f1b13a5d74e8183b79d078a11e2efb8e9e6201c15bc667160716b71c4983e24a43777c8a4483564bfe006de40ca9ea626a0b1b0"
+    },
+    {
+      "path": "dist/motion/useParticleField.js.map",
+      "sha512": "776c0eccf247a7a74b93d9a30519729678c41ec2d86db8698c4c7d6b25601319a22cd30f398ba1a477d9ee3f1a30b3dac18d5e20310af35e93f60d602396fadd"
+    },
+    {
+      "path": "dist/motion/useReducedMotion.d.ts",
+      "sha512": "16fbb3a3a4f1dbf88416b0843b785166e78f4aa6951b429a85f7210bea47f6a4f44aaf662cbd50f57986ec191fa3c3756979e72c90b69260607f0bb042a4808c"
+    },
+    {
+      "path": "dist/motion/useReducedMotion.d.ts.map",
+      "sha512": "be494d7fbf2802e14c50684902ffa75cf56f075061992fab114570140f39f471858f2ab264ad815c360131ea4b5b7f419cca08780746d1e66aebf43d740da1e2"
+    },
+    {
+      "path": "dist/motion/useReducedMotion.js",
+      "sha512": "4abe0288979bc14fdb907a4487403d33beeb4153264b5e44771133ae44afcc576f94c1d7045ca28c5d684d5fa51b9680f2c86aefe42230f2549b57bdea275d78"
+    },
+    {
+      "path": "dist/motion/useReducedMotion.js.map",
+      "sha512": "9c1666aace01ec8390529b90e386b970a5283ac31efa1519e022b2f1c77a1d4974795a05c18a9f1e2daf5d325bd07ea25669528cfc84ed99407a529849b12864"
+    },
+    {
+      "path": "dist/motion/useSequence.d.ts",
+      "sha512": "1b44d078bb8019b4fa18d29dd7dece2a30a23345c6662157d798a491567d84f87f6fdeb49291c5d67da37cb2539d989e31da97bff3dd3322265eaeeba635f780"
+    },
+    {
+      "path": "dist/motion/useSequence.d.ts.map",
+      "sha512": "2633fdd33b03af20605c958b81b053431d79308cadc8ea699a1a55ca8512216eb338e920893dc5e291de2ac3a76120a42848c105fe45c49e9b4396c9ffd2cc87"
+    },
+    {
+      "path": "dist/motion/useSequence.js",
+      "sha512": "fd7f701a2fb10daba057327a06e64ae39f5b7c7895c73fd68acbd9e331178f6dbcc875ca91d2ff0604735e21782713f208f209182aa8259dce7bdbdc274f043b"
+    },
+    {
+      "path": "dist/motion/useSequence.js.map",
+      "sha512": "733a418a4beca4489cf1e57ebbb88f85178210dc56683c53ba10fe4f2021018eae2b63031095abaab8840ddc1568c72094ddb632e57e937d0244747fa5015746"
+    },
+    {
+      "path": "dist/motion/useTokenStream.d.ts",
+      "sha512": "bebbfbf51638c74ed741e09ce23abae45d79583bfdde4e29e986b5b14bb05c70718dbe955bd71b38ba92562e4451862688fe27f4ef4578a9fe88314c7cc3c2b2"
+    },
+    {
+      "path": "dist/motion/useTokenStream.d.ts.map",
+      "sha512": "4080aa76dde8c896dfb17f8eb1db588a4302b38deed9bf48936f6040dd9957853f25fc8e19b4c7a7005775f6744260f2ae1aae540ef889376a12248582598397"
+    },
+    {
+      "path": "dist/motion/useTokenStream.js",
+      "sha512": "e8ee3924b4d8f2a73b8c347154357edba4a9b8f7b95cae13d3fd137109fbbe09d96b9fbea0532b428014754efa4cd215ec79fc1411d6bb0936283be07dd6f6fe"
+    },
+    {
+      "path": "dist/motion/useTokenStream.js.map",
+      "sha512": "7f2acc81ec6a47c0f59da6f2bb9f9609315c3364622cf7c0978dddc9977275a392befef98a51ae16c97788d8f71b9036bc012578f8c1af3439572fbfe910c69b"
+    },
+    {
+      "path": "dist/motion/useTypewriter.d.ts",
+      "sha512": "04b451d640e388b68b8f735cec24a2afa574df81d954d4fe9097b7019e5d9903f9ac5fc2f5b26098036c2c1a97b60f5cbd99b076e0955232df7c378f67a3d4ef"
+    },
+    {
+      "path": "dist/motion/useTypewriter.d.ts.map",
+      "sha512": "1da0abac793203b772373de50b40c3f32955eb03ad45fa285ca95bd562ae3ec0a5ab87545e642647f8b45a694374a59efa77a111ec43bac9bc6d9206c1e7943e"
+    },
+    {
+      "path": "dist/motion/useTypewriter.js",
+      "sha512": "b9166a6a1195e49475653295309f6a84811448a3765fa7de63dcfe79f760d80d64e00e0eeca0f717da5a6b2f94886c8cdd89bd29e992b4a698f6d44da408e9b7"
+    },
+    {
+      "path": "dist/motion/useTypewriter.js.map",
+      "sha512": "0e3ae7463605a03f754a28043ba87f96aabb1d859038fb3b6398625d23d1689a6da4b5849482aea28f331e96211b6d7483fae35827a7cf09a26e9e67d4ceb746"
+    },
+    {
+      "path": "dist/router.d.ts",
+      "sha512": "6ec38f975b7663bacc106074002f6727780fadb0b62f5c70bb2d4c0ab3ba46b2e2f9e5065e6907cefd1eaf0b74efb26633a3d2f5bdc6cb2a3d85b3c7dcc5ad1c"
+    },
+    {
+      "path": "dist/router.js",
+      "sha512": "c014c9a3ea60873c343ceaa698b77fe7bb0b8097df46843d547f53488bfe736e2beabb91869b88263d6328340413e9574cfe08b05b8038102bd70f6d002286d6"
+    },
+    {
+      "path": "dist/router/useRouteParams.d.ts",
+      "sha512": "d0ccde4526527f5acde64890714c72b104f99fe0f31a31bdbfc373f4233921c52ddabb9560db90a1bc53c61c45273e2d52d7672959b3b85fa8e385787d28c012"
+    },
+    {
+      "path": "dist/router/useRouteParams.d.ts.map",
+      "sha512": "7790322127e86ea9668ef9ee0ba15a772b178b066efd7c00479bec6a34dec4ca99c791c2a6c974a07220c1749f1fe38e87d780360165f0ff2f8417328bd5305e"
+    },
+    {
+      "path": "dist/router/useRouteParams.js",
+      "sha512": "39692c914411c6fa55d0247f234f521250132a471689c314cd4832f16d58ed8aaeb3d69d8b0d8e34a6669f60e48d09f48ab0369297e6b1d622c1be95bb639fd4"
+    },
+    {
+      "path": "dist/router/useRouteParams.js.map",
+      "sha512": "d48414bd50bb13539c429baf0cbb0b071f46fd9f30ac12a1a6ea617a069cb929eee25e84afe9c46ea47018210649cf9f81732d9bcb13b3fae8ce0749ee9da4b1"
+    },
+    {
+      "path": "dist/shared.d.ts",
+      "sha512": "fded5bb7262fab06bf2fa5ae3030f4cfc59f11d676347b5959ad2dae908827526f1568ada3e72a135ab9be9d005d585c44f4c9ae8ec3127ab1ea1226c0727e81"
+    },
+    {
+      "path": "dist/shared.js",
+      "sha512": "c5c4cb8d4deac4ea73fa8c14df7238ddabc7ea8c7b3a43700044b6f749c36dbed44876b061dc80fd907c916a25d91e54ce5ce02df3bb20dd1790e64360e3bfbc"
+    },
+    {
+      "path": "dist/shared.js.map",
+      "sha512": "cd5d5873576f7d3a1a2a01d0e490205b008739c42a0c5600df8f1e42bb83061395ffaa08113de4850d2733993a591b1c60e2fc25df4639ef1e20210207f2817c"
+    },
+    {
+      "path": "dist/useActiveElement.d.ts",
+      "sha512": "6968846b5803c14dc3fa8edc2a52de96650449d52e1d9ec809d8127409353d6dc0ac066972019b11010195f5be415fd18427cfc429eeb5a9d652793435475fc5"
+    },
+    {
+      "path": "dist/useActiveElement.d.ts.map",
+      "sha512": "d439aebba62645223069df57c5ff1443c7d6932ee8e6f61ae582fa5f2721737eb443192f83ac8aa3900eff31a4142aaaf3ab9177807cefd8366ecee52f837360"
+    },
+    {
+      "path": "dist/useActiveElement.js",
+      "sha512": "004d7336cde043c819fe5e62c0367ba0e43e3a531f779d7319d2f9c391891790871707fc6993b057cf501c86a7e2f58e2a512a78b3710979de64428e55203512"
+    },
+    {
+      "path": "dist/useActiveElement.js.map",
+      "sha512": "5cd36aa44b0ed1efe4d1ffcf65083cc8c5d8812b8b981e2bff4a9909e9c5cf50f33a6bdf6b2dcf8b0017f2953e2f03a18b687d0f9b912813b90a291b56cd3f89"
+    },
+    {
+      "path": "dist/useAsync.d.ts",
+      "sha512": "d3ccd9c415112fbb3a7207e73462e5121644d2f83cac9741663f490837363ad53e487680150bf66ab5f52b0b47e06008cb1fd516e6efe5bb55b5bd0b5d2d3a4c"
+    },
+    {
+      "path": "dist/useAsync.d.ts.map",
+      "sha512": "44b5a5a4cc1c5dd100af1477edfaeac79c4d4c8d52dab609d78ebe4e0179792c3d73d730f4d423e11d19ea74e84bd187328b863ad74dc5ee645bbc044fcc5e33"
+    },
+    {
+      "path": "dist/useAsync.js",
+      "sha512": "704caab4e29e7106955743104c33d5a10915d16a983f6cb48a22455480a6e48f1c428b57f83599fa93299f59467256142cdfd212b570893854ba2b95238051f1"
+    },
+    {
+      "path": "dist/useAsync.js.map",
+      "sha512": "ab8ac1cd4ade695af13d7193bf5de9de829b1df840cdbe2428a9e3fecbe75ceb76e4559a45490ccd1121671c9ee30b60071d6c72166a925829cc2a802fc11c93"
+    },
+    {
+      "path": "dist/useAsyncAbortable.d.ts",
+      "sha512": "a28162776af54f9a3982a62e0cef96662d2795097f4236dd9837b30f867cb551ff1c861da3fac8dd7f95fc5ef02df1a4204943bc84523e8485aca4af7e5cc0bd"
+    },
+    {
+      "path": "dist/useAsyncAbortable.d.ts.map",
+      "sha512": "1bc964b5a81560b1989f0dbac48ad5d03bc5feacc3acef5aac3ba5aa2d034672c68ac7a81bb378e2708b49db2254dadf00cc72b6f76d3dd209c09e5645a9a627"
+    },
+    {
+      "path": "dist/useAsyncAbortable.js",
+      "sha512": "ed98df892cf9023243723d78b009bbf85cedecd491afbc34ceaeba7843b19586f4c1e05c1952faf6c67a601c411e1113c14683dd736acf7560197a3675bef8bf"
+    },
+    {
+      "path": "dist/useAsyncAbortable.js.map",
+      "sha512": "aae7a6daef9f186ce7240184e75e43dc7445368b9019b3e18a44df508d069b7c99d50331dc77643c2c4de392cf1282ac62b25b859550c793bc5e0e1c86a4b96c"
+    },
+    {
+      "path": "dist/useBreakpoints.d.ts",
+      "sha512": "a6c2670421985c9cccab7bbe4e343b7b101fdf935629a478ed64c869d5559cd6535c9fa74c0e9482eb37576f020764fe3702328d639da1a9bfae1e184678a593"
+    },
+    {
+      "path": "dist/useBreakpoints.d.ts.map",
+      "sha512": "e2c67d06672706a6fdf7e04e582f25e773556c0896a610e6e59c2e7c82bc7b5385d6628d387e7ecff648fe9f5cfb47b31ab4848bc05ffe074b53d43f44632f00"
+    },
+    {
+      "path": "dist/useBreakpoints.js",
+      "sha512": "42c326ab5bd1cf71db186fa68301b99b3ab2422ca1714b214af8086ace820d9fb975c72ca9db1092c181c72439f02b9d9204b27d97979f642de34003f4a4c0bb"
+    },
+    {
+      "path": "dist/useBreakpoints.js.map",
+      "sha512": "f0ae09c8a6f42c393dc3f13ad76dc8db36ab211cc82439d4ac7b2045199e54d0e6ac947ad2816a00fab865eea516fc162e23ad80534cd21d2136f53a8d9b9539"
+    },
+    {
+      "path": "dist/useBrowserLanguage.d.ts",
+      "sha512": "b1e346ee58834bb25c79717b74876696b8557d50436b07d547761362b243111f48be14b116dd58efc3033d4ad1c6f53f8e7a823e2961363ed2bcbc61183f1731"
+    },
+    {
+      "path": "dist/useBrowserLanguage.d.ts.map",
+      "sha512": "fd9deb24d6db36afe72457ebb49971525d8a0f45b0f3d2052a581570ae347a35b8401482638ca8711faf0e83ac239128a1cfa1cc5601807fedd3d486417c1420"
+    },
+    {
+      "path": "dist/useBrowserLanguage.js",
+      "sha512": "82e15ff8de6ef2f62e644264ff24d69a6eb863f3886619e9bb04037d1b03599c7b93b4b8c5a95fb967fb3aaea849d9765682f1c68bf6d713a2b0cdf186dceea5"
+    },
+    {
+      "path": "dist/useBrowserLanguage.js.map",
+      "sha512": "2bf6891e766edefe6b4059e7cc3b47a1d471ccf1c941ac7684e292edb608ee200905ed39c00b5a56dad89a67b04eb3bcdcb6cec884579c646549e1018b49962d"
+    },
+    {
+      "path": "dist/useClickOutside.d.ts",
+      "sha512": "919eeef0653d7d7071d6d265543a103422bb6fd7ec6637a1c63404f07422b643774be7d2a04b9783dae5452ea2671d0ddfca58d59e8e51f7a2494a9cad61b0ea"
+    },
+    {
+      "path": "dist/useClickOutside.d.ts.map",
+      "sha512": "f626de6b6676ddd310d4812114617a5f7f9f9740cee54b449b26c359b180f5cd49db0e7f8634e72483e46dd9c024b4f2f214345a207d2cdd19be7aca64fce745"
+    },
+    {
+      "path": "dist/useClickOutside.js",
+      "sha512": "c7ab97c05ad775dc57c4a80ac00a30380f1e4e7a66f9422db6538f0b49b20d4948708f89803ce18c23c86f5c96cc3707b568278b1554c3d22fe3cb551c5dcd3c"
+    },
+    {
+      "path": "dist/useClickOutside.js.map",
+      "sha512": "aec2b5c622353276f052de11616188689b4942c533df9285915ba01cd4cf294af49688d2336e3a69070487d7901f3f450cbc2cd000f41aef0f0bdbca78eae3a4"
+    },
+    {
+      "path": "dist/useClipboard.d.ts",
+      "sha512": "b53e8d69314c5f1236a1838705e9d99236e7758d53f470b0b65c35d5365a0b0e37e97215e81167c5c678a2ecb70c895f8c652b63355cfaadd78f0b524367d68c"
+    },
+    {
+      "path": "dist/useClipboard.d.ts.map",
+      "sha512": "e8e04393863dcdef6630768c0bae44f7192d07dd0be23baa6a0bf7de41843ebe95a336dc479282000b2f13b8a5fc099ab54344d551b2cef92fd8be3bbb4694bc"
+    },
+    {
+      "path": "dist/useClipboard.js",
+      "sha512": "529cede887f2e9078d77db84d4862a9950e81775e42992ec72903c3a77a3a45210a2354ce7e4d4ec7705e7e0dce28d9f0514db26fa0aea18368d03c30e706613"
+    },
+    {
+      "path": "dist/useClipboard.js.map",
+      "sha512": "401ed1d3e015a28ac73ac51bf63ad82ab77b94a34565f6f25a6e166e45523c661cee8eb561294185ec8b9ad9cd10f841d1c71138c5396741aa827e64eb6464dc"
+    },
+    {
+      "path": "dist/useColorScheme.d.ts",
+      "sha512": "04d318659b37eb2820468c86a37d1efee49ae4d056611ca6660d9e0de8cbcb58f3a38b17404e0972031c1eadffac321fe1b1c46fc7da16aef410360f3d4fb3ad"
+    },
+    {
+      "path": "dist/useColorScheme.d.ts.map",
+      "sha512": "c7dd3d657a271414ff5649e734a581b96fae6b72159d8f8cab0efbdc73d84a495f9209d93a68498434dcb60a9adbcc0888cf3aad2004d11d022f637a80f6f38d"
+    },
+    {
+      "path": "dist/useColorScheme.js",
+      "sha512": "279190d1e21dc380289bc3f0476ade1db58713d75197646e73e7c05c06d2254687e3a42cca368e473b941b9aed00483701e87fe450e499d124d86b2154b5fc75"
+    },
+    {
+      "path": "dist/useColorScheme.js.map",
+      "sha512": "570dd7970676c3cf2bf16aaa82fe19e6624aa8e8b9f686c44f3e5e511904b801bee5c04a4361813ee2c15a69a613919ca0d588fb600e3afb4ab705dc097268ae"
+    },
+    {
+      "path": "dist/useCountdown.d.ts",
+      "sha512": "08e90a9c61060519f3d012fedf35c1f32a4f0700591b93badeab964aee63bc4955e7fd7efe6dd981e6a77c27a640614baa13bb346f50b480b7485719596cc345"
+    },
+    {
+      "path": "dist/useCountdown.d.ts.map",
+      "sha512": "f0fe7aa1d6618e490ca50d7696051fde85123cbda2c34962d5d984f056a64e7e543279181bffd09bb965ba65aba9c61deb52fdf78d18589467c237c6cb49ad5f"
+    },
+    {
+      "path": "dist/useCountdown.js",
+      "sha512": "0977cb8657f2015ea0cddce1b0f344c9b24f88114c75cd807c7d661f5c89453a96b2901639cf2d30cf2870ea7887c00593e54c2488f2540e4df2b656df15eadd"
+    },
+    {
+      "path": "dist/useCountdown.js.map",
+      "sha512": "52831369952382d9cc59e9d94348fccdb67785517cb418e7145417ccb730afe5168e9aba7c4668e7f33423b64c8ae18ed1ec7f5f2435bf72f57841481a2d757d"
+    },
+    {
+      "path": "dist/useCounter.d.ts",
+      "sha512": "d090a2eabc3e7c26055daa29983ad32be76709d9e5eaf0e99eaa9e3a477498f3ff4b8f25a37814e5956325c64190c0eb1c218c2cd9e7e9ed5ae4c8e792702319"
+    },
+    {
+      "path": "dist/useCounter.d.ts.map",
+      "sha512": "776f710599db8584674f4a8f2e15bf31b8cee1b1fe525e73ebd2765c05ac7cc218eea86d3a30f50a5cd1b2102ac425727b46800e96f9175950480357d32c521c"
+    },
+    {
+      "path": "dist/useCounter.js",
+      "sha512": "02d9c89b46659455b257d18756ffc26cd772ecf638b7bb544ec148384603338a40cf659e8481fe100e02eeebe04ff62a6443bcdd74f837a806d52b4214bd7be0"
+    },
+    {
+      "path": "dist/useCounter.js.map",
+      "sha512": "14e0cd4e29af02837f8e438eef7f022cfc597c4d01974dae96180567eaa5ef2b6b811b2f8f4523380075e4e3372cf58b8d0450eeefd7fd7190b363246ff621cd"
+    },
+    {
+      "path": "dist/useDateFormat.d.ts",
+      "sha512": "1de37329560266dacc18d8de4ee487bbeebc90342d32eddf34e6812b37ad94529a4329f04d8ede13e20b19c516715ebe332145f907f351cc17e66707761cdae5"
+    },
+    {
+      "path": "dist/useDateFormat.d.ts.map",
+      "sha512": "4aec925423e55fa1ef43663e2367884c3b5d06e30f0940e41b9f0842293ef578fb5ea066888a23faea5839270112a8663ead46a786b222e812a0367a193bd7f4"
+    },
+    {
+      "path": "dist/useDateFormat.js",
+      "sha512": "07eeb123af55f45a094c60a1d21a255bb9da331a0a06a361258ea3145bfbbf906a5d560dc1630fd14b5b52052ab0d866300e33c5e4170ceaa260e1841870b8e6"
+    },
+    {
+      "path": "dist/useDateFormat.js.map",
+      "sha512": "a21b4170d5ecb0875a20bdd04cd8ee3a725389ec7338b46c0b6d152a3c17033c4dc95b684c092ee0923f6972e1b85cfae643250550def05e114c586a19624202"
+    },
+    {
+      "path": "dist/useDebounced.d.ts",
+      "sha512": "28762b629f24a0f845a94b0b260910929aea6c5ecdedd1936bbaa87bb786575b70c9548fcf6a4279be648f8c8b3f27a2d87178d836cbfd2e589348bc23062197"
+    },
+    {
+      "path": "dist/useDebounced.d.ts.map",
+      "sha512": "0a4765aca5c9246dcc5f07129509e1d90e442f5adecae0a4d4fcc500c3db2c99f7253d7d8cfe944927323536d281b64ba85e8f6a8cf928243f0987d550a6ad8d"
+    },
+    {
+      "path": "dist/useDebounced.js",
+      "sha512": "4b0151979fe8832d3584108763e1a6dc7acf91bbfccce977435fa3df6914ac9e2d71b7aeb74e84a006f7cdc174b2efdd48b1c4453be12c1913ca57427bbcb766"
+    },
+    {
+      "path": "dist/useDebounced.js.map",
+      "sha512": "ccebf1c03bb3ce1937a6da2b1a3d237f65d8401ae3f3f2ce6203cafa7c44e1fe1c3e40cafed0a15f87e2037d02fb400a500f447494c8fb6ef93d21d715506631"
+    },
+    {
+      "path": "dist/useDeviceMotion.d.ts",
+      "sha512": "3355293eda42c35351a860f8cb2aa4c6e1d90ebdf44a02bfc5398d52d35dfc32c46b0af37f26814966a62460f2df75ea1c6b0d3850eedd9972f4931f7447bf36"
+    },
+    {
+      "path": "dist/useDeviceMotion.d.ts.map",
+      "sha512": "965abf7e13fff713f2e63fe83da9f8fda6a31d18bbfff9f61fb55d6213f4177dc1d4cebd239d429c36b97ae48d45fbf54ecd9006020f918a605cba4a27216eb4"
+    },
+    {
+      "path": "dist/useDeviceMotion.js",
+      "sha512": "3641715e3eb543277f4ee313c1717a4b8524d0392f7821c5a8e460c834436585c3c825716c672f46caeacceccc1ec9599a39935ca79a68ccbe7c1242ac8de020"
+    },
+    {
+      "path": "dist/useDeviceMotion.js.map",
+      "sha512": "cd5d4bccf4348013ac4b38038d46615ff82f131e2882379b79d2f4961f08388a77b3560b624e637c8d1d22cd226342cb506c567f730ee1ac75794ca2743e0bf0"
+    },
+    {
+      "path": "dist/useDeviceOrientation.d.ts",
+      "sha512": "43acd61273a199d8c5a8a84291bff10968df142f4c9eb12f8f2381192ac598ddcd80b66a6843575e90c85bcf2c9571a07559447d9bb78918464ba10e095102dd"
+    },
+    {
+      "path": "dist/useDeviceOrientation.d.ts.map",
+      "sha512": "17a652c2beb59214714d65ef1120ae3933975a3725472b483ec88b6d97aed6439d6449104b98b71784cc43aeeaab246ba2a6f9e03a228afaae7273c9eb4b9883"
+    },
+    {
+      "path": "dist/useDeviceOrientation.js",
+      "sha512": "f8617fc7a58b0c15a7186fe7bed51bae4e7e853878b3e2552562ac7009f8d30a47bf17ac6ec89dade096c9fc891779db39a3c7edfbb45d123aaf84d0093ccb75"
+    },
+    {
+      "path": "dist/useDeviceOrientation.js.map",
+      "sha512": "074eeab3c3cd38861d89b9ccbf191b1ba1cf14fb7cf7de6c97c9c7be7e56533ed04d19dbb6bf7db6b3334242ee7a9c7e1710297a977440a67f9db9492e72a292"
+    },
+    {
+      "path": "dist/useDevicePixelRatio.d.ts",
+      "sha512": "f892d66d212131fcef0449dda220a3b4566aa48bdaba2ae3021eeda810005b5ce374354eff7a369e5789462e94158460374115a85640d9e25a2a225045839a87"
+    },
+    {
+      "path": "dist/useDevicePixelRatio.d.ts.map",
+      "sha512": "c7554e6c58ebbe4b90bed735fda90482943af65e9e777beb7feea2f9a31bed83a73cfc98523bf12f4cf68b5a46d358a07c9e1f6698ee9f6af850948c06d07fe7"
+    },
+    {
+      "path": "dist/useDevicePixelRatio.js",
+      "sha512": "234625649ce9deee0e179142f79e6ae1025fc9d12627fe4ab17f879b2c301e60c5329ab3feb0a798325bde9a5491045b2bd5dedd66e55a0bcf407a0501456a83"
+    },
+    {
+      "path": "dist/useDevicePixelRatio.js.map",
+      "sha512": "b58b88f04dcc7eb2e1c027375e91064d499c62a96f323697898e9b2e6cb645c57f5c3fdc07aee87c4b8e1dce1f2dacaa96fcc85f7ef3f8f285d4ff30cc1c9fab"
+    },
+    {
+      "path": "dist/useDocumentVisibility.d.ts",
+      "sha512": "36cd57aea133a82dcbed2e92524e3d506b3382998512b9628a1437810cf1d009d253d62263b66a7e2f86f7b4e18642563a18dc873bc69b1307d521f43455c5fa"
+    },
+    {
+      "path": "dist/useDocumentVisibility.d.ts.map",
+      "sha512": "cd8ce2dc9cf8c483c7568a162de63b9d02f46cd5e986146101346e893a19fd26c9269f19dfad19d6a5efc2cdfc045d38ccec5954e6dc7fd13fd7cf349a976ecd"
+    },
+    {
+      "path": "dist/useDocumentVisibility.js",
+      "sha512": "84dc01e73c31b91753382b0361b45c3f82de926b32f25083c816b2e4b4fee5963f796954752b7cc252a8d3e200c6e9654adc01183730a0232acf83d6c75bfb0f"
+    },
+    {
+      "path": "dist/useDocumentVisibility.js.map",
+      "sha512": "87b3637185712376a8a78e55d77719edb9e3875e04b2d95da9b44c8d7f60af16b2320fbd3592ac33a05e4a9f240e4d7cf09c0ab0781b5656151c9a5aef3a519c"
+    },
+    {
+      "path": "dist/useElementSize.d.ts",
+      "sha512": "194b67c86ee5a0e39c46036568ada4ea6bddb8af078c80599c0b907c621d8bc6559a3cc31864e7aff76b239bf2a334a5f757840f972e76f55e8e813a087e46a8"
+    },
+    {
+      "path": "dist/useElementSize.d.ts.map",
+      "sha512": "a2c887d3d2a0e8b9c98c7d6ca26939a58b549e74a3d68d7877d62d30378b70a1c8095a28afd5f616c669d0f0facd6fc29105016a1855f6bfde54f91d7169dd20"
+    },
+    {
+      "path": "dist/useElementSize.js",
+      "sha512": "1a88f87821b1346f7bd6498023b5595b06cd4fd155d7231e29dbfd0e6b6744a507b6c468a5a3d6bcfc3111d8c296c1ab577c8ea219eea1b270a65673e058fc8c"
+    },
+    {
+      "path": "dist/useElementSize.js.map",
+      "sha512": "dce23de1590d00ce64126273e90716b2f808ba6a65b9ebdd0bbe2bc7fa58278291d185702bd5940c5be4a88c839a5d8f089df742dcd7073a58d54fc32786e0e7"
+    },
+    {
+      "path": "dist/useElementVisibility.d.ts",
+      "sha512": "fc051630dcb2424320e385d50430e2d69bc6e3ac09b5f474093227c0f6e4a2e62829248854b8209fb569de691352f192e98bf4a2f5a30e096756de02ca0ed2ce"
+    },
+    {
+      "path": "dist/useElementVisibility.d.ts.map",
+      "sha512": "70c53a57de877b593f414b26a2bb7142907dfba8ce8e229f891c976d6f5bea23d7f3742af000ace5a8da93cedf52495bb5d506aa2bae1b57dfc19cac47047024"
+    },
+    {
+      "path": "dist/useElementVisibility.js",
+      "sha512": "2b5758b2c90ed28530e3b5ed3793101c8665cfbe43bc58de863eea051361bb6456ff5306f45226a28c92f204293fe00615b4cb926f603d525cde71789877eb87"
+    },
+    {
+      "path": "dist/useElementVisibility.js.map",
+      "sha512": "e76eca2d6e38aa96e879bfbf03065d93ab9b9004ab7cf5fc25f16d2e88870f3b183b63abcf515c7915a3196bf68a4fb833774eb96f778dd3471881028a35bbb2"
+    },
+    {
+      "path": "dist/useEventListener.d.ts",
+      "sha512": "0b7a29151aab3286791b811102c1fa0b0bc70b0d99a9d0d69d3cb2078e15c7ec97b690ee7f1eef58669163bb3e6d549c135116870e33818bab9586e80b1042bb"
+    },
+    {
+      "path": "dist/useEventListener.d.ts.map",
+      "sha512": "51c4c2d5b48f4605a8951f5b908a5251f2cf55d75e6d41e72805c9f6bb9afcf41e080d199cf068d834b690017292750be358334f959575886fcc455977a47e7c"
+    },
+    {
+      "path": "dist/useEventListener.js",
+      "sha512": "fd48172518714d71935e575ba34a9768afa45783c6dc79dbe166afd9d0d7492995cdb8804d17f8cf04373aa0275b13b87bb0f2aa244f0c553364c59e689a15f2"
+    },
+    {
+      "path": "dist/useEventListener.js.map",
+      "sha512": "17058bc61b8c2301502f024cdf1cfc836e863907895f6d979a1f6ec045f47c2d89b28fb9e34450a23a33ef7bd586fc1da3ef3853646518cc072fb644b9772b4e"
+    },
+    {
+      "path": "dist/useEventListenerMap.d.ts",
+      "sha512": "27a08f65434b6d7ccd2233382db3d200524a57bd323cb84fc51670f3537aa1107d146a51d316467c4002a55b222956b80086540cf5c7d6d5731299d92bb1047e"
+    },
+    {
+      "path": "dist/useEventListenerMap.d.ts.map",
+      "sha512": "1d9f54622b344c95f12ab6c78528d850cee01c9fa90746ba60af749ab148fe3c481d8287b9857ae5934938f757f07436ad2475e93a9cd75f4d0aa78a8c8b5a23"
+    },
+    {
+      "path": "dist/useEventListenerMap.js",
+      "sha512": "22de614afbe20085e64d2d86c5c7a0ac3076c0f05394230f6337a80078b30e71358a6f4856a9cdc4b44a642ad7db8bc6bf043add58793d521650e34a6956296e"
+    },
+    {
+      "path": "dist/useEventListenerMap.js.map",
+      "sha512": "fba820f22a3e76728ab733213e3676a63552ac97907245f8da85d9fa0793fb16af3e9ec7f657e5fa30832b9a439a087bd3daf7159b057bfc00dc4c98b3186b5a"
+    },
+    {
+      "path": "dist/useFocusWithin.d.ts",
+      "sha512": "1d2b3b3171b134b9ca49865dc84829892077e344b5b3ef5ff2c6345f9f340d83d132b341774aab6ba5567981a21fd81817e45c2ce8fff5355009916286882cef"
+    },
+    {
+      "path": "dist/useFocusWithin.d.ts.map",
+      "sha512": "1246f5a8ba9222836ed57cac9ec23de216379145c491406147e7b88608d1f4bac837bbe901809c511bc201c58baef95b5e6205b470585b24103ff1ba0f12fcea"
+    },
+    {
+      "path": "dist/useFocusWithin.js",
+      "sha512": "72d6586bb4257254a421bbd5a382e079028a24c4303a08f2e6055622720153d95edfc4eec0b7850c206c44140f9dc45277b91008a23a199fb43557a5371479dc"
+    },
+    {
+      "path": "dist/useFocusWithin.js.map",
+      "sha512": "e6d2cd1103c41654070186f159a56feeb27c96e840b0b8134aa44ca9d3ae781960daaa64b1dc9399bee3b2b72c511e5dd9a245855a05d0fb02d04d600bb44697"
+    },
+    {
+      "path": "dist/useHover.d.ts",
+      "sha512": "fc147007f7ed171333c03b4bc1f862b9109d3503a7166e2c74910d3420f3a6e62b6da3eb2c2d3a360a93f11844f9a4cf5411d7e5051a1a17b581250cdf44a288"
+    },
+    {
+      "path": "dist/useHover.d.ts.map",
+      "sha512": "aa25a4ff6dba4caf0c9656786808980f754422b2d2ad37b794309cb27517eafc6d966330c6ba7e67bedcdb3276b57ad3e5891dfa0cf9879594bab038f22a701f"
+    },
+    {
+      "path": "dist/useHover.js",
+      "sha512": "0d2fc2e7c67c031edc15c18f7e521d0d713ae66b7e5d265fa078f842836ed7405ce2d07f80c1e5c963b76a4532dc042fce8c630ff7ab276600d3e4cdc19629c8"
+    },
+    {
+      "path": "dist/useHover.js.map",
+      "sha512": "b2aa0804fc347cd194d79e611e6c94696ec150cffe3c645515b7342facf924f2bb868a9d9322bd459950b49703e81162b73734767f71e941eb18babbddaa3f61"
+    },
+    {
+      "path": "dist/useIdle.d.ts",
+      "sha512": "174b23eea05c55620883712e3f761ceea4e8fe35dfe64dda349d721afa59b5258d0953759bac67272da01abbb4759d4e0234f081159a5425b6ae34bc243e8e4b"
+    },
+    {
+      "path": "dist/useIdle.d.ts.map",
+      "sha512": "bf057e141a7586cd0136a4dc6c7c8c160879a6e956a5160f6df74fdda16375d63340d5f524f7f4032b3b988ada1548ae0fbb475967a85e515273d6325086eca8"
+    },
+    {
+      "path": "dist/useIdle.js",
+      "sha512": "6bec2d1a894088a997dbb8196897bf82b54a6f6ce3fbd2c60054c45da56b9328a17ae44d9bcd85f8af16208981d673b785f5ddd69375d18aa458f206302c4c54"
+    },
+    {
+      "path": "dist/useIdle.js.map",
+      "sha512": "9abcdd2e4fdbad501c1c6a5931309b5d0f3b8ac6aaebf446db16ff8ecf8bfd4b0b21425965595be9e6a971592ee603c64e9c0c5f39cced2eecaf0df7661663e8"
+    },
+    {
+      "path": "dist/useIntersectionObserver.d.ts",
+      "sha512": "ff655f7959402a15b99d67a1ce2c7e6a2b4bdd9fb79e895d273d84a2a2bc5a61ad7b1c145ff73dade7c9122958adb6de2a5abbd53d5a13ee5d6a0c3047557492"
+    },
+    {
+      "path": "dist/useIntersectionObserver.d.ts.map",
+      "sha512": "2056cdfc9b1addf8e68d7ddad6578e6b81ed6e90cf5e90b3729f731e29c186917159995c71e65fdb28c64aadd112588421b761523bdd683f146c381a67849c32"
+    },
+    {
+      "path": "dist/useIntersectionObserver.js",
+      "sha512": "a186ae767467e1f0579d56a4edf6f66d097c909ebc19b3ea6357cd40c38a4203a979e10d1186f1e05061f0bad24cead0d15efdbb678a1ff1e8fd6ba90ac07c5d"
+    },
+    {
+      "path": "dist/useIntersectionObserver.js.map",
+      "sha512": "ade441d3bcc4d55700fd0263e99ca0c331f15d8841d875ee1e96a9991905471e6f97cdb85ca376d8c8af31ae5ee68f68f50b960384fb383dd43bd68cf2686fe2"
+    },
+    {
+      "path": "dist/useInterval.d.ts",
+      "sha512": "26acf59d7b6d3410af5b0a738b7c2fb30868e9cef68db7f2b52f848bde99ebf0efff0f1194350cf149056a7d89519c4229d2560d7eab567b56419b2979d4554a"
+    },
+    {
+      "path": "dist/useInterval.d.ts.map",
+      "sha512": "3cb0abdaa61b574056d751a614f503892867d2df98b4c8003d46e421b8bd980e5a0a93bde0321979d54b468f370487472571d124ebd533129fe4708099aa7eb5"
+    },
+    {
+      "path": "dist/useInterval.js",
+      "sha512": "6910cbc8f1c6c4da05ae7e8a5684fff50b23a05b79e56e0d8c0ceb19d4fc0d56ea067d6ec5bb38d2b3c9d772175f83eeb3409c618b2659cdcc9c0ce0904819dd"
+    },
+    {
+      "path": "dist/useInterval.js.map",
+      "sha512": "949936c96d4f74a0664430fc0959911403fcff87a9a48be3b859864d344816b24d2daae3a7193ec123062addae14041e56e500b7ed1dad85aca9f890ba5a4ddb"
+    },
+    {
+      "path": "dist/useIntervalFn.d.ts",
+      "sha512": "fa655d401f0b2d94ada60b0f37f3a76e2742c39e5c4eba02f0ead48c4518f148ccc7840671a2497ce4195f22c89a27e448d9595d17a5141778631828dc4641a0"
+    },
+    {
+      "path": "dist/useIntervalFn.d.ts.map",
+      "sha512": "98668fdda09bfeb9173ba78c454b0249d677f72b8293341c5f2327a3708f931a04fa894cfc57f05d3cf13562fc23002570a15a1f290832e88097a8581c6dcc32"
+    },
+    {
+      "path": "dist/useIntervalFn.js",
+      "sha512": "8916a805ac8ec58907d5bf1914fc1af7f394908cb39a02256fa8f382c49ffa3fea2ad85b513df3ae74ce4c806a58c76a40cdaaa2ff43b604c97b4b6de2a5a5ed"
+    },
+    {
+      "path": "dist/useIntervalFn.js.map",
+      "sha512": "8ab36217c624c556292a345ed4d15298d12e8c4177ae7abe808976ac2b530f33c164eabe371f7e731943420a03ab0a134a9002efb468066075b3419037966017"
+    },
+    {
+      "path": "dist/useKeyedAsync.d.ts",
+      "sha512": "fa000d7dffae1f8182908628d6c3d828c7dd71da3cdae4bcbb52e9f0374f4c75af730accf8626ae416417fda04d8f36a71964747c86121ef0c863f3e7143e72f"
+    },
+    {
+      "path": "dist/useKeyedAsync.d.ts.map",
+      "sha512": "82bdf9a7b7071889c7e8d140acacdd996840c2ca1404b5bbb3e34cbc6e389f08e636b63838657f8e01a10f0c1d5546bce21c0579628d8eac519705f91f618b66"
+    },
+    {
+      "path": "dist/useKeyedAsync.js",
+      "sha512": "ae0586783ec65bda7ace4bb441612da5213ca0c8ed7072ca2c4085562de5cc647ce9edbea15d9f65c853ee2925104110f235ea13d4d511f11f7289ae76b4f396"
+    },
+    {
+      "path": "dist/useKeyedAsync.js.map",
+      "sha512": "e98a2bd8523324ef42acaeb8c511e812fab987d457207a859164d1d08631b32d30d7a03d558a07f7762ba62084b1c894b143fcd3f1b3418a6192ca1f566d070c"
+    },
+    {
+      "path": "dist/useLocalStorage.d.ts",
+      "sha512": "0c0c424d79a64e8b537c20f1d96e46de2dfd12c81b68c5943ed3b587fbed11ebdd2986e152e6d3b18ec68612b514e07ed54f9e1621470929127b43f010b8f6e9"
+    },
+    {
+      "path": "dist/useLocalStorage.d.ts.map",
+      "sha512": "0c4e77430735f085bbd105e9468e6dc2d3304fd3b615b0b937c9dc2419256203fe0254c9d3cde7f2f38c76b62c798a20f6cba59aa3736b7f00a44a90751525ae"
+    },
+    {
+      "path": "dist/useLocalStorage.js",
+      "sha512": "7aecca64a6cd0e735d4aff290af97acfa4c26edfb8df87042a95e3a0c76974642dee064aeb8bd23c61fae642dbdbc06cba2d4d0f1b554422f41d32564a8e3644"
+    },
+    {
+      "path": "dist/useLocalStorage.js.map",
+      "sha512": "782b5af777b9a16b0d04ab62ed339f77a498340025044871829f0fb52afe2eaceb23f57ae60944ea449833035884240d1d9e562ca9dc0fbd4173983d14cf2b8c"
+    },
+    {
+      "path": "dist/useMap.d.ts",
+      "sha512": "ff06a7e28c1cd5aa1274fe024633ce3e8aeac0377bceb5005ffe8a53a607b6b14ae44ca97ac76e693adc06e74dea4b3ff55d87fe0d59467af6e1907ef9ad5ab4"
+    },
+    {
+      "path": "dist/useMap.d.ts.map",
+      "sha512": "f66f389cb7fa01fb8710730673e5382923f060e59b3bf6854ce6eddb5b8935496cf885430ac8ae7f4f62458e6666964494afed99c56a33035e64dd1bdfbe096f"
+    },
+    {
+      "path": "dist/useMap.js",
+      "sha512": "5c54d9074d4a228c772f002d1f5f9774ceee47438a9b7a8c74fb6bde9ca22d4bf0e74fb169628fcf3944c0ce5b498f395d1eea97756efd1341391071eb4dd2f3"
+    },
+    {
+      "path": "dist/useMap.js.map",
+      "sha512": "e9e7fc2bbe6728194ec3583a3b52d5e6f55e6e906cc8e584b72897529ec0f73e606d17972d2f39e41c32d0a5014714608ccde3e8959d6022f93df668845eb280"
+    },
+    {
+      "path": "dist/useMeasure.d.ts",
+      "sha512": "c8d52f1941c83b8fb53319eeaac5766acf21b80a054b2fdc27aac8bde7f839031216bf4f446cc16ee2e3838be940cbb99ef025ec34333593300aeb326cb63d35"
+    },
+    {
+      "path": "dist/useMeasure.d.ts.map",
+      "sha512": "1d0a4ef29eb324e7d8154775d1a6c17ff3ede8cb51246022728e0d38c5f6c9afaa050039e13a9caef11964d5b88801063a2b2d4579028614388eaff6d51ae2ec"
+    },
+    {
+      "path": "dist/useMeasure.js",
+      "sha512": "a51c61b198715ca6095c239cf892bd2fc5388478cf8f83f3f66de2d22d5fd69180c2cbb97753327375a43128293c8c8c6a90150e05a3b4ee9c64bdd03496d214"
+    },
+    {
+      "path": "dist/useMeasure.js.map",
+      "sha512": "cca2e744651f65342e43b8182f65e46498a689d8e805c3679767852b2c8655434e019df9b2ba700cc436251591d1c66d60e31528821c129f304917f2a85fb421"
+    },
+    {
+      "path": "dist/useMediaQuery.d.ts",
+      "sha512": "76caf0a9871de47576c7ff1039cffd911e6f8674c24c4838c6eccb98805a838e6b3e9b32d57af363484294af3afe33542489bb3704f558e21403515390c116c7"
+    },
+    {
+      "path": "dist/useMediaQuery.d.ts.map",
+      "sha512": "202b4f10ca2cf0c8b2c2d69dda01b61c1bc788ec2db6fa43ae3761844038e9bfbd23f4345d8b50c05bd071f2ea7028a591ce35d64ca7b22649cace90c0619233"
+    },
+    {
+      "path": "dist/useMediaQuery.js",
+      "sha512": "6cfc0ff7e9fc4c5b1e1abc01a6f2e79a9d62a35bdff3926e2c76376a20ce8705a36156d845b078f7851cd17ff6ca2286d5feb516c605c70fb7730119a086818e"
+    },
+    {
+      "path": "dist/useMediaQuery.js.map",
+      "sha512": "4e022dc6472f84e8c442a39e586e2365e91ea502420fd0b6e8b0a45514f79df4f72dcdfbfcb0c50d7e2d6ede90e423e51adfe879fab09a787cf1a21e854335e9"
+    },
+    {
+      "path": "dist/useMouse.d.ts",
+      "sha512": "256ddcf08afbeaa3b00c43311363c8e3fdeff60a8aea6febec0ee191d3178df67edab089a201c9fc25764b7e56b26c2f21f8263949d039c4a311c2848102c1a5"
+    },
+    {
+      "path": "dist/useMouse.d.ts.map",
+      "sha512": "93eb7c4a55d4b3627fcc65561ef090a646dce9446644742e14602feb9b63a2f9f1bb4bf13c3376b1178fcef2ff381c4df90d8d04ff0110b4752eecbbefe5d411"
+    },
+    {
+      "path": "dist/useMouse.js",
+      "sha512": "702689f5824b2befa14e572c1ba35e6c25e0ff897a0354eb4bf104573e274db3088aee296bf2de2c82cef8b4676434b2a129a3ec122901afc81da09a6504ce8b"
+    },
+    {
+      "path": "dist/useMouse.js.map",
+      "sha512": "659ce37577b97a606ff55121dc636a50e9842d71901e7771e32d6ba880dea3a29d945b4baa58fd97a08cf9aee5e88c766ca15d8bdf8382626a52e1a80a3b3dd3"
+    },
+    {
+      "path": "dist/useMouseInElement.d.ts",
+      "sha512": "0ec57a4dc8f6f7e2eae3fe7217fff64db0a6f015eb69d92b3698e3dbad6ec05ba11f0899bac9bc9e05f44238c0d5baf73e5dbdf42116bcd3ec49a59045df5b3e"
+    },
+    {
+      "path": "dist/useMouseInElement.d.ts.map",
+      "sha512": "40454adb99c7405a18cebb026181ce720faaad063d3abfaada48a36b43ec7ebb9c492c461c16a211136ce3168e8c06b2433c22fda75ac5c499c831f53624137b"
+    },
+    {
+      "path": "dist/useMouseInElement.js",
+      "sha512": "bc26d4d8b1e39f0e21de692fee776178e205b4b5f5e985b10617551d7667ef065822ec243cf744296e16287f33284a461b41ecfa9513d5a698f4441f9e343b88"
+    },
+    {
+      "path": "dist/useMouseInElement.js.map",
+      "sha512": "9d2e027556c58e7ed565d5281eacacb1de19a29c5c681c5c559c868fff07db277166353b15b1f235c24f6ecbed7511fafc849725a03ed732439ccc74a735a8c9"
+    },
+    {
+      "path": "dist/useMutationObserver.d.ts",
+      "sha512": "3be6e626516d07444050b10ef52d7cc4fb29aa157accb069249b2ac8a2d4f4c738129f4a73cd0389fe63bde128ca1d13b9363bc364fc034ec04f511696a96671"
+    },
+    {
+      "path": "dist/useMutationObserver.d.ts.map",
+      "sha512": "12060de1782067f125ed372a6cf6bae98da587178a434de52229d503e901133e0ca5bf051333d76a19e35cedc151a860f02ef4e8b69586fb07b92e13df5bb100"
+    },
+    {
+      "path": "dist/useMutationObserver.js",
+      "sha512": "e60b7153f828a61c52eabfffb4f2ce2fdef12ab99670e7e6f34d3731f5be0ce5d30911e7ff7aad1371054b7eac26fa3324f4a300bd6840e022bb96c57f198f77"
+    },
+    {
+      "path": "dist/useMutationObserver.js.map",
+      "sha512": "a13639fbe0e27a81c413d46a4fd39ba21db9541445dd686fe2ce3a39246cb0d63abfe84421b634ed37131115b43bd0efe73ea7f3bf82c246f34a74a1085526f9"
+    },
+    {
+      "path": "dist/useNetworkState.d.ts",
+      "sha512": "5411b75d30a7416d3fbc14aafa01763133db07a9da255bd1d63d204ef14669f1d1b9c7da9313e1eecf220734dffd93da4b2dc3c287a68f37be23d7b2acad0e15"
+    },
+    {
+      "path": "dist/useNetworkState.d.ts.map",
+      "sha512": "150ac8b67dd6223eb9204035fcc971cc6edbecda530f5aba0cae8e5532258b6c6587ad2726dfafbc356cf9ae5eb1da64b98ab7ac9024e29863d0a2ab2d4f33d3"
+    },
+    {
+      "path": "dist/useNetworkState.js",
+      "sha512": "5fed1d8b557d28602749e1fb219acb8469ff85a448f1a62bf889b21685e2502e69b80bdf360c617ad1ffe172626c569bb2d1aeb2cc921c700f923edfc3a8ec50"
+    },
+    {
+      "path": "dist/useNetworkState.js.map",
+      "sha512": "ac2ef0262d01682e709805b90599774d528e8c67e96a96ecd24dd62d9b6d06087e4471412ce165bae0c4871edd86c96cc19f6a334bd21f6017d680194d7c66f7"
+    },
+    {
+      "path": "dist/useNow.d.ts",
+      "sha512": "e6b84434adc13ce548cf1890aa9079bdc7f254c7e05eb3c550f0e2fe97748ca469cfefa0e74bf0407fa87a782727bb83afd24d08b4927675d2b4cb481c1b7070"
+    },
+    {
+      "path": "dist/useNow.d.ts.map",
+      "sha512": "6653a81927452e5ca5a4785c08401b1a90301c574a38559271ef633d368634491332ec07e263d632b55d1cc7651546d52d416ca683bded1ee4111db1b82fe2de"
+    },
+    {
+      "path": "dist/useNow.js",
+      "sha512": "29206dfee9a37ca84398c36af9a92f87e1563f1483a29326fab595cb480c32ef679a50e4d35a1300c765b902dd4cc2dc4ad2e4c1435a513c6c2a9388d093cab8"
+    },
+    {
+      "path": "dist/useNow.js.map",
+      "sha512": "72fbda60cdb36776464d4a231e17c52a9fb4236b2679e90720408fdef8a5bcd49828647014b40793f9beb4a1093fced476e3f2a03f142604c4c04f26f56272c6"
+    },
+    {
+      "path": "dist/useOperatingSystem.d.ts",
+      "sha512": "15f064c87fc92d89566828aaf6373c14613462e6b47712afc8a5faa9325738661ced0eae3d0436aad8b2184e1ca33c72e134567b8c567b02ddd03e5ac6807493"
+    },
+    {
+      "path": "dist/useOperatingSystem.d.ts.map",
+      "sha512": "655ab0b17a17519859d96cf274cb44936de720b056a543fba3546a925524c8e033fc31aa9febd4559e379389f69f123af943f5752fe5d58f3fbb7592233b7759"
+    },
+    {
+      "path": "dist/useOperatingSystem.js",
+      "sha512": "e5148d14c4384ae8e3e9d2685e5fbf422ea07b0ec7ef85f8494848525de778ab33d5402eb5475cfc016efd24027b46952e2eae49e9511aa26e9aea65ef03b454"
+    },
+    {
+      "path": "dist/useOperatingSystem.js.map",
+      "sha512": "0aa78f64edb40887c020327455803b3efb53384a9aa6d7a286844a96f94ff2ae06b4074236d70b9105cd97272b56cb341790795e97750ac91c630eef6a0bdcf2"
+    },
+    {
+      "path": "dist/useOrientation.d.ts",
+      "sha512": "14b64e96c2f51555dcc5c657c7cf393383ea96cb2f1137da160f34b43d3c5bca0afabdb9a232b0721549de74137ede17cc1fedec22b702226e41806f73dc31b6"
+    },
+    {
+      "path": "dist/useOrientation.d.ts.map",
+      "sha512": "d3b466f413582bcfdd9c16078f006c0b53d5e0cb1bb30d408c35fe2ad54f1311a4f37f58f85cfcf174e898c3f801dac8047fe1049585eb72be3bcf9e1d3a15d1"
+    },
+    {
+      "path": "dist/useOrientation.js",
+      "sha512": "df4a570fc4b16a232829a12d40d08cb8f9fdb16cea2abe573d0c063932cd26bbfa79a56dfc5886b5a2d3b967a7b45a6459c090d1eba45a174c69c86218ad3149"
+    },
+    {
+      "path": "dist/useOrientation.js.map",
+      "sha512": "a95c52979a0b75d77985c83744313c437fad696c9a392495072b314176509e6501364bcf58a705f9b28b2d90de1d57c1f7d4c070b6caa0a3d69dac8398296afe"
+    },
+    {
+      "path": "dist/usePageLeave.d.ts",
+      "sha512": "7e5b1644a026f40696f351067dfcccd4c35e6414535c591f7ed612fcfb0eda7f9dc2b8958944cccd1a85ef1c4f8b8c4e21927b02aab3c0fdd9d3ae606ef675d8"
+    },
+    {
+      "path": "dist/usePageLeave.d.ts.map",
+      "sha512": "5031c950d7b781d4cdb128a1719e635ff3333755ffe49b472dd35d55e8551165b162aa73f11ecfac9658e9868eb62b0b54470027361e6b69218d98f9dbe91dcd"
+    },
+    {
+      "path": "dist/usePageLeave.js",
+      "sha512": "a8fd131f32ba8da1e0c4b7a8d1b0cf7ae5a7d2abb2c6fe86e17159424ab2ec9918c351753b306a92dd750e778c33d796c844049a018dba61013bac27cba79093"
+    },
+    {
+      "path": "dist/usePageLeave.js.map",
+      "sha512": "9bc24e04942c0664db93358de81202281b09222dbea6d934f7fb3ae347e37f6c4182008d1d626f09864cf1e8ee78550ac6d822e935ecdc82dcfa94cbc12a4854"
+    },
+    {
+      "path": "dist/usePerformanceObserver.d.ts",
+      "sha512": "d8aa5c694ffb32402db8961a3e9d6713e2cd6ce9478e03cba7b35f651a9b8906c5a61df42666a892855f1425fb63262865afdbd394c06832c71d8cac67b9ad23"
+    },
+    {
+      "path": "dist/usePerformanceObserver.d.ts.map",
+      "sha512": "df0a9d551cb2299716d7f50f5eaa59bdc3cb7eeb0cfb55568fb6c3c7f876bc135a3f8c87634eebdea18dfe9098c87f90ea20d119a20f91e81d236b4b2aa018fe"
+    },
+    {
+      "path": "dist/usePerformanceObserver.js",
+      "sha512": "5763774b9f77d4d01d0f87dcc7fcaa43d78432077dca9cfe3a362359d40e69b8ba7250b7e6981c1d58b34dd71b02a39025bd708ebebe055be8392f946d6b0801"
+    },
+    {
+      "path": "dist/usePerformanceObserver.js.map",
+      "sha512": "486b5b94873f5559d2669187e4e9ccfd4da947c3ac14bf2f57b9ad2f2bcd63a1cba7ef2996fa8a33a220be125df7196464a4d38d7a09cee2257c485906cb329a"
+    },
+    {
+      "path": "dist/usePreferredContrast.d.ts",
+      "sha512": "f7e54af1c9197d97fdefa87a6460b1007d7ee6dc5b3779f2c1fc7ed9969a74028a48ad40a9ad6f6d1fd96b19e95ff758aa826c967a7afabf449603253aed6560"
+    },
+    {
+      "path": "dist/usePreferredContrast.d.ts.map",
+      "sha512": "be35b0bce18ade7487a84f09b8195526c46ae2d9ee30d03523099fc3362693156d7625902934156aee2190ceb4ab4aaf7799053cc8b57a2359c5a04c2076a5d3"
+    },
+    {
+      "path": "dist/usePreferredContrast.js",
+      "sha512": "548e98e4a4b641549dabee1f55286146c6cf11f521e12d28eb0dfaab8aad2a83deb29f1e0ccccbabf437c70e5a78f0a26a5a1746f1522be49da6f67fb754b580"
+    },
+    {
+      "path": "dist/usePreferredContrast.js.map",
+      "sha512": "2343d02a200dfa34a635e9d00042c1685a45ee4d722b9cd3014458f7124cdd9c04ff4139fa8c65d88636fc83bcfd579fda03b75767757db6307f2cf9a1dfea8c"
+    },
+    {
+      "path": "dist/usePreferredDark.d.ts",
+      "sha512": "029f17a82f7bd71243d346e5072abd473045d5d8dfa0bd926c56d50e8fb77726a0ee5e17ec3e25b8f004273bcd4934e43ebdebce313fa6b55c3d0ca15f64154e"
+    },
+    {
+      "path": "dist/usePreferredDark.d.ts.map",
+      "sha512": "32fb27e0ff8d815c8cc657a175da583e332b150f58cdf06d2dd1a6d2ab067dd493f91f605501a0220f0a5d50a82b8d315de2900292c7d8760f862c42ad11d9bd"
+    },
+    {
+      "path": "dist/usePreferredDark.js",
+      "sha512": "44307c14af7eb677c988801791d0fb7f3b5746b2d0473ad18bf15eaff56d1c86744572b85e3fe5491211c39f7e17b4be74b53f187ce389a1cf2a937cc9f92143"
+    },
+    {
+      "path": "dist/usePreferredDark.js.map",
+      "sha512": "e1704b4829d718ec86cc7e4fcd807cdb74f43a31a016bb49956e83f5a0da332412f2a0e122e41bd6d9d7aa7691dd66926085f5d220e69c6c44f66d5bbdd4b3f3"
+    },
+    {
+      "path": "dist/usePreferredLanguages.d.ts",
+      "sha512": "9f1d7978cb6dd3eb5cf1cad66d19919cbf60f95baec05edf3641bcc8ffcfa1f462e74de7f35203b911f1cad921eb9e96cced43f79b8abfa67aff6d34c8db6a4a"
+    },
+    {
+      "path": "dist/usePreferredLanguages.d.ts.map",
+      "sha512": "b94ce1a181ce863e223a40738b3224c5c66d09f07bd38731adcaa5baf5cfa1c226f1eb89f541d9ecee53bc9432e47ee80961e7f75cd1645796cb58da1fa2b45b"
+    },
+    {
+      "path": "dist/usePreferredLanguages.js",
+      "sha512": "793318b2d2c3ae384158a2035343ac1df099dcea01892141691247d3fbf617a1b8e503ff3028a6b40d8f45d7ddc9170d4fb306429acd399b256316364c8c85db"
+    },
+    {
+      "path": "dist/usePreferredLanguages.js.map",
+      "sha512": "721ec3407651ad7e85872b270cda28dae5dcc56b4c51ed77736b3975a063074e81814ff646551018611e76117125dc5fbc9ab5f0024ab0fd58cf16df5b35e771"
+    },
+    {
+      "path": "dist/usePreferredReducedMotion.d.ts",
+      "sha512": "a684e5341118da4df4817669a0b709775fbfba15e273114d7c553690f741ae59443d40054583a2cf49b387b47c72228ab5240bbb3dde2830cd796393a7c8c880"
+    },
+    {
+      "path": "dist/usePreferredReducedMotion.d.ts.map",
+      "sha512": "389cd28c646287d32fd55dadce449a8d2102ad47038b00cdfbc68ca97b4d125d241514704b539b2ab9368570db354caf8f3168890e59e5cd766b53df186e6053"
+    },
+    {
+      "path": "dist/usePreferredReducedMotion.js",
+      "sha512": "c16122afda33c7f5eefc63b25d03c888be18226a590df701f67719e6ddc9943dfaf05d5e72740248fdcf46c0a8cd1f6d830bfe5dd993cb4989108bd7223f8b2e"
+    },
+    {
+      "path": "dist/usePreferredReducedMotion.js.map",
+      "sha512": "afdb05f73329c80824d79ca8df19cad6daf24356b8de7f18959d0fb9a5d232b2f8f66c51d11b2f06bc615f5eef70ef545a0b51c8502a154919a8708d2407db97"
+    },
+    {
+      "path": "dist/usePreferredReducedTransparency.d.ts",
+      "sha512": "2e67bd1d6db08bef8c7aed33c8d8b0bcbb4b09aceae4624f1061a879685886734a4c5cda74b44efc243b18fef59984c7f64578430c2f384688cb3c648aaac24b"
+    },
+    {
+      "path": "dist/usePreferredReducedTransparency.d.ts.map",
+      "sha512": "8a98ab9cbf587dcfc09ccdbd94e88d95dc3580d4cf3bacaf0e37a219f256c41e5ad7ad176f11d4fe6a2bc3d5022cb6152d2778b2ae3c4de6ebd6da1d9d21f717"
+    },
+    {
+      "path": "dist/usePreferredReducedTransparency.js",
+      "sha512": "81003a4cc6cba96c883f881bb164545d31e073bcf064f1190c19dea7dd7f9e974d213671b27919ba464a7ba236e89581ce377a9c6f6da19285e4af0e78139867"
+    },
+    {
+      "path": "dist/usePreferredReducedTransparency.js.map",
+      "sha512": "46f34a13958943e1e28179a2433828561e764e9c04b430ec4bf3043218b9e6d4b5b97dc7ef1a4d6f1d540747df884990ab179960da199e24a59b9436b33f220c"
+    },
+    {
+      "path": "dist/usePrevious.d.ts",
+      "sha512": "52e4c7c5b8a8dc4c1dbb817d4976d33b9a7f62915982afb6b6367db6538349b59e6d3b3e88c2ee90030e3fb144d794b6dc830154da67d675cef259a594a24a66"
+    },
+    {
+      "path": "dist/usePrevious.d.ts.map",
+      "sha512": "4fd9e6510f14fab003b9b2c3ff8a318cd890ba156b75de62264b58de295fb666c92a51f8af44f7bb61d7e98fa88acff21ceaaaa0a52c7ec7179aca7b5e7e29e4"
+    },
+    {
+      "path": "dist/usePrevious.js",
+      "sha512": "e9da41b05ffb631ea3c020efb4fde7d6028f1379e303958eaa3c1fee717bbac80b328114c4cdc8a39a1d59c15eb80151d140f501b4c004acbc5f367b0214aa66"
+    },
+    {
+      "path": "dist/usePrevious.js.map",
+      "sha512": "91f67f472d5b947d0af7443abf77ee4e1cbfdf8075e863d199849255ef55d5d99a955ec12cea87a6e2396c1cf12a6ee8d9f90b40a86f9bebface90ba102eab64"
+    },
+    {
+      "path": "dist/useRafFn.d.ts",
+      "sha512": "2ba6c30f43c073d774b4077be3c59708834886ef056191e0679908006ffe13ad3424a71b9890bd228fe3698ce55386361bfb753e23e66607e2c0821fc5562bb9"
+    },
+    {
+      "path": "dist/useRafFn.d.ts.map",
+      "sha512": "3f77ff3d6be6a15e971537a4d9be73dd60e12dcc15e57573f9adbf2ea9b8b16627fcbc1d37bfc125081c60037e1d593182638e1d2cf6852e2425927873fb1095"
+    },
+    {
+      "path": "dist/useRafFn.js",
+      "sha512": "e911ba7baba0e4c21fbbe603decede73164b07a94abd5985fc28d8c48c9c02d33ae42053bd8f7195a8cc72f84917e20b3442157b64d4c81c579e5132cd604382"
+    },
+    {
+      "path": "dist/useRafFn.js.map",
+      "sha512": "de73f5f1c1dce5b22fdcc1d5629873ab2954050542c35ef69610980d3e9d7d2463c3c62a2cbe8602d59f85f6adf527f369bf1e7e1f15e28f2068b860377f5d0d"
+    },
+    {
+      "path": "dist/useResizeObserver.d.ts",
+      "sha512": "866523cfea52b79c62c72251c9f79c1ac676823634f1e08b35719e6c479a45a19cdba9ae9ea133ba6732185eb209654ee89014c0b8ad267d29639e73c4f243ff"
+    },
+    {
+      "path": "dist/useResizeObserver.d.ts.map",
+      "sha512": "f1cb0f69ca48603d122740dc2b2a30b8802a7c9872cef9b633bd5700524c4407e4468aa7e3a6df3b8926ace9f0bc5d1a997a4ad44d7c75f7adfcb3cdf31f033a"
+    },
+    {
+      "path": "dist/useResizeObserver.js",
+      "sha512": "c4a72def85b5bbdaf87e6584251dcff75c999d29cf4275c576a3811880d0e2bebdb6928ea3836f5e2d3bdfd50af33f84d9e431c5f32eb70b23233460f6ba3abc"
+    },
+    {
+      "path": "dist/useResizeObserver.js.map",
+      "sha512": "084e3c18f86da31f111e198b115e6439a33ad29a5883d545a4edf71d6c41acc491600804f6601bea64c32f942da5902bea62d28bfd3c0f8630fa5546a5226ef0"
+    },
+    {
+      "path": "dist/useScroll.d.ts",
+      "sha512": "06ed4d071f4e1413f6abe2d248861227d95d4072f11df8a2b377fbe50a79e20733e1a47d6e05781ac856903ea0bbcd2e23815c7fbd3750d8d314dc696b6d4b24"
+    },
+    {
+      "path": "dist/useScroll.d.ts.map",
+      "sha512": "c479781cca709734bbe0e121070f962747991af0ea818619275517bb02f38d814ae3333ff3b5c08fe7c776ab6aae090a38770471ea5caa95f358c7d5ac9571d4"
+    },
+    {
+      "path": "dist/useScroll.js",
+      "sha512": "b8652ec6343a9330ff13f870176be3679b330454d8fe7c1387ee6bb3180ac7935f71ac616232dd5fca9ca9e6eb6c1376e5292937da30a36980d12f9b711a5a72"
+    },
+    {
+      "path": "dist/useScroll.js.map",
+      "sha512": "215ce654eec1516b63eed5e10c6472df3ba50fdda4f3b84af57f409fbe4e178a60789934825c16ccbe2a60d2ed2fd748cf592e1d91ad03f46dbe801112eeb705"
+    },
+    {
+      "path": "dist/useSet.d.ts",
+      "sha512": "5b510d601305be46368a6d790da91eb59478ea97100fe8f95f3895e9476a78cca8db0736d1ad56e6fc9357e7abd5cf23c6da70c7cf10e3075d1eddc3d5a5bc74"
+    },
+    {
+      "path": "dist/useSet.d.ts.map",
+      "sha512": "fece10129bdfe5a0811562e11caece083b2329d45be7dfd577bac9463c72b1a99f094a3d8542409f4a893403c8a2a0abffec5f62360d441622a53c7cac0df8bf"
+    },
+    {
+      "path": "dist/useSet.js",
+      "sha512": "7caa95f2b8cc195bd09ed61382bb13e7e1d1a42387c171091eef920b16ada44d6acd35c5e1c56e2ce0e6558b6b50026bce518803759dd444c519c783e0f3c47b"
+    },
+    {
+      "path": "dist/useSet.js.map",
+      "sha512": "bd3fdbfe7d93975950a56113d5a9968991161d5e67e9641f939b64b759259e4a8f5a92fefbf437c96c1a853791681704da94d966c4c1b58baebfa85a88f843ed"
+    },
+    {
+      "path": "dist/useStopwatch.d.ts",
+      "sha512": "8ec3bd7e30f909b5a6351d7a49c8438643aab2c16ecd722d93bfe4fa8a5c7ca85b584d7e575575a2543d9261c89f668b1eb88553c177df40a74282623d8a8bf0"
+    },
+    {
+      "path": "dist/useStopwatch.d.ts.map",
+      "sha512": "10295181777e20b5a32d7c8f2d3f7b1cfe330ec8b99ba799d39723a73052b32101c27a2f897f3ac2c7c25c8b1e5f1f1404304b20d543382e6619a2bfb793b505"
+    },
+    {
+      "path": "dist/useStopwatch.js",
+      "sha512": "b7216094b2cd8ded676ba397f457dfd8ae7c243b93a2b91279556964dd8ec2c0d89868c19f4fedba6b98c4c2664bce165889935def9a0eaf7f129a3fc87bdc09"
+    },
+    {
+      "path": "dist/useStopwatch.js.map",
+      "sha512": "a641c371d371375b8e5285d78bb7e9504d7bbd085406f08ba3be286eafb07d1e4cafebd2ea488b494974305a805076ad9378f9d2b5fc15f97bb9bdcb0212d96e"
+    },
+    {
+      "path": "dist/useSupported.d.ts",
+      "sha512": "3e8cb2db83add06d589c7188c1fe8f875045d6a5c5745f451fd3b43086cb4c3391ddcd49cb0b4dfd30aa7475c0ca5b975c99b488812792589a66866ae350ae5c"
+    },
+    {
+      "path": "dist/useSupported.d.ts.map",
+      "sha512": "deefbfdd90b456478d7f7fc2507bdac3710f01115f06aa19b2277d997fe7608084c9c175810b26b406254747247299bdeb555e8385d4f860ddb1769897a6217f"
+    },
+    {
+      "path": "dist/useSupported.js",
+      "sha512": "b55f4bd55ac91e2c4084ff2158b390fb5d6c3655af8c162c813fe450836a7fd71e7cc85064dfb772afadf07b73699ce27a39bfe36be659271e9e61e8cef64b8c"
+    },
+    {
+      "path": "dist/useSupported.js.map",
+      "sha512": "8f59ca8596f1f54107ce4ffc6986fc42bb1bb311a7676d8572a38b2470fa9af9f70a555d506ea638019bd58f70c6328732a96c044b66931b7e8e42ae1564a2a6"
+    },
+    {
+      "path": "dist/useTextDirection.d.ts",
+      "sha512": "649f50f178d0cfbbdd2e960f31160ba74840580cd5d3ee9bfdcce6d65cd18429be11d5d95a44950066a955fd0c7be87785b7e292e4907f664c70a354b1a035a1"
+    },
+    {
+      "path": "dist/useTextDirection.d.ts.map",
+      "sha512": "d02424c3397cc9ba75d9aac9a4c1c8a9e784951f08a38eb8309fb168f314ebe84a95e1fb84983499ec702c01c8efe43c55f19db204e3cfdcdeb8c03c5a37cbac"
+    },
+    {
+      "path": "dist/useTextDirection.js",
+      "sha512": "50633c893060c712b2eb6fb95c430988965c56a3f6908cff44b1844d53a631be8b4204c75baf22a00a678b070bbbc8c4822ee727d8920fde36c65908cf4b82d3"
+    },
+    {
+      "path": "dist/useTextDirection.js.map",
+      "sha512": "2e12e23f4500ead7f7ca43397e6f8a49bce4be68e5c25198af3e81f035ec43eada4b33647b779392863ef899e71321378da8be6204959a7954f65b37054d4e04"
+    },
+    {
+      "path": "dist/useThrottle.d.ts",
+      "sha512": "6b56e90d0a22397360eeef0de20bf383e6916215dab751d33a103a6feecdc503058f5e83cfd0168f7db1f3f50828108548b148dfbfaedd29bc9c4e63a198440e"
+    },
+    {
+      "path": "dist/useThrottle.d.ts.map",
+      "sha512": "67914571b2bb4a781459b7c2083504f10887a309c49c44b5bb60d4ed3d4056367b1a9eda5dadb737e160bbbd5f1794b4d05bba03929ee496f41b01b367499fed"
+    },
+    {
+      "path": "dist/useThrottle.js",
+      "sha512": "6bfbd1655d1f2314090b1cae18d68046a0907c3e215a6018699c9fc8980d8bfe4821d0941212db303c9fb26098e9e8f45d8c5a033ac1843acaafb42a6b2a6f94"
+    },
+    {
+      "path": "dist/useThrottle.js.map",
+      "sha512": "da9f7dfefd9c49dd8dda91af201e8a0ec1b2a02b94da6778cd9742aad5ae1588fc63d77e12ea3527648aed1dcab4b388e0e10025586b044a673f5d6806597b2f"
+    },
+    {
+      "path": "dist/useTimeAgo.d.ts",
+      "sha512": "7c2800f6cfefa4571aa54a6d40ac3237a8ce1f3aa313a520b369e2e0ca5e825e26df795209033c903d6ae5f74e3b8242bff4b73cfed6862a4f4d6d14fa352dc4"
+    },
+    {
+      "path": "dist/useTimeAgo.d.ts.map",
+      "sha512": "f47dd40e7af71036a952ca5c1c0cb82a85618b09a20ad174e812c6a53a1d2257791c2f89031ca04e73d7fa94828cdfb685c8ccf8aa8e095f10502dcda0bcb13a"
+    },
+    {
+      "path": "dist/useTimeAgo.js",
+      "sha512": "789015381a8392cb05b91b9728c01efa726376022ca9c477d4462ccdfa09354e973d4b1496ea6d95623af987c27b08f2058ab243f242b0983c975bf5e8bf55c8"
+    },
+    {
+      "path": "dist/useTimeAgo.js.map",
+      "sha512": "c2d63fbbcb4dcd5051e4a7d940fff775043578b8dc3a178f0e0ee3f245aa8d3db43f923e5cb97cc0cd210e4e9bde53343578bd3840e2110309cb5a14d46aa582"
+    },
+    {
+      "path": "dist/useTimeout.d.ts",
+      "sha512": "d6005ab6047a78da18b480e9f221cde0df5ebff29a65d2fe4fcb187c3b5635d23583cc7e5ec363e80da29a8cb47350e6022adac878354184fe4414c7e11e9eb2"
+    },
+    {
+      "path": "dist/useTimeout.d.ts.map",
+      "sha512": "067d96e0572f59b4697ea86ed53955ca088b0eba045f06e3f3d3607af4c87a5d172a2cad55a742ff2a2959ca736f32913d3433f4872b32df8766be0019341e64"
+    },
+    {
+      "path": "dist/useTimeout.js",
+      "sha512": "56d8cbf79e3f92c5f702908041167a257f22ba25141bdd66adb5a8af6236520b33233f6af37871958f01d1ef374f89beb150eea85e6e2fd282e8902e175d12a3"
+    },
+    {
+      "path": "dist/useTimeout.js.map",
+      "sha512": "b87a6edf351595e92e925bf99ac9472f8b3943d711801dccc80803fd25a9167216ee23023b367236098ffa82387ab3f14c85785336b6f76b666ee3aa0c7e6fb8"
+    },
+    {
+      "path": "dist/useTimeoutFn.d.ts",
+      "sha512": "8e6e25be796eb19328cd46ed2d0208eb0fe52a5d712cdb2ff371af4057c4927b4d0e3fa0e9df3265b985a734e7eb8eef7a2414c4f19d21b6c4b400b152d249f8"
+    },
+    {
+      "path": "dist/useTimeoutFn.d.ts.map",
+      "sha512": "6049c0b591b8b36eb8f5e9261ba2aaabaf95637e6af88913eb4afd77502ee5221dd02908f7d4a55a067cd1f649513947ef20f00971507d9e2ea085df38e8e302"
+    },
+    {
+      "path": "dist/useTimeoutFn.js",
+      "sha512": "d8b1bef0807418ef4504d85cad45f7972fd53e34dae050c743349e3bcee9e53d06627b77edc2e3efe25b1dd7bdb689192878fb9bcb9b680f64cb70590d178578"
+    },
+    {
+      "path": "dist/useTimeoutFn.js.map",
+      "sha512": "251ae571b7a2727b7687a26eba9dd6bb4cc4c9ceff754542dda3b42abf063fd25e0911581db0297912d9ac2616b8867a5f6d8bfc2b91ab1ae429bbd479e577ac"
+    },
+    {
+      "path": "dist/useTimer.d.ts",
+      "sha512": "087871c2063af461d741198661cc3306360b36827fa955ac9907ccd13dd5417c51305dad8fb0adf5c6bf96fc08011f7fcf1fbd4a5e627262a9fb2288473063aa"
+    },
+    {
+      "path": "dist/useTimer.d.ts.map",
+      "sha512": "38f72943505efc446cde5ee28b82e854c3b34561a78dc680e8e1fb5d9b1e22a8d2f93c432971e4f5b5b2a1090ab8e33f76822a314176c6a12a1d210ab41009d8"
+    },
+    {
+      "path": "dist/useTimer.js",
+      "sha512": "4779ddad7a547ab3b3ac21c183ba50fae9b3dfe44caaab6cbbdde2baf830de51f97bf869c8666a9df28b9d1806c0a6ab0a6a5cf2810f1a75b81963619c3ee070"
+    },
+    {
+      "path": "dist/useTimer.js.map",
+      "sha512": "e64c7b91dcfeff48451f0b15a5e8ab529086eaa05de824910cff7fc2c4b4ac3b5e2f8d973468cbef7f857e0518241ba43eb290891009c4edd0241a9e233c7f90"
+    },
+    {
+      "path": "dist/useTimestamp.d.ts",
+      "sha512": "f400a92fbef83949781db109edeab38879262fc6409d01127a47339db23ef1e4d9989dc65213ca8f94a2e44f304700fa2b66c4525a6a0a5a36ce4a16136e4301"
+    },
+    {
+      "path": "dist/useTimestamp.d.ts.map",
+      "sha512": "375655e9900751845907dbb8f3732a485f861e7514dba3d9257b508f0ceaa45ed1f425d97e34bccae77d6dd4a835b957365686fc3471d1c184992950761eae1b"
+    },
+    {
+      "path": "dist/useTimestamp.js",
+      "sha512": "c1af817868557c35398e50bde6ccca4c8035a4a71918de87cc4a51972212a51a3511ce8365a72e6d0c784b905ffc92b1407592a2789f1631f0f7c6c9ed25c14f"
+    },
+    {
+      "path": "dist/useTimestamp.js.map",
+      "sha512": "2101205fa06c69b5a516fc09777eadab54fbf2f3e79076d4e8d0d42c18429d52d9f1715ae581317b660b41ffbd18bdd9dccf438a43c7e1d6406ecb7f983b3913"
+    },
+    {
+      "path": "dist/useToggle.d.ts",
+      "sha512": "78f512c355ca57845c14ece3f616425a055965daec1f2fc3a9f9b609eb15872b628e437acefe311fd828c748f9e9c8e58a845e4cae45968146905ab643bfaf8d"
+    },
+    {
+      "path": "dist/useToggle.d.ts.map",
+      "sha512": "b8546a822b771b1aebab12ca6e2b289b785542c3691e01ae7566b3ac6f486f7f0bc93501deb12136a68e5662005a0848d873faf32b7730197a31f4991aed626a"
+    },
+    {
+      "path": "dist/useToggle.js",
+      "sha512": "edc41736293a616e7308035a634295a16fa6585ab4f61bb1304abc95baaa3684feb505945789011e9eeee53b04226c9d5f59061dbdb9341f9d50cb63dfcbe41a"
+    },
+    {
+      "path": "dist/useToggle.js.map",
+      "sha512": "fbff31fb9cc6b2afa83006f9f3c919b7dacda47b35c934fe77bf7466c2cf70b109c4368fa24a4f733b3c71c8bb53eb7605977a321a487e188d159726e02b2175"
+    },
+    {
+      "path": "dist/useWatch.d.ts",
+      "sha512": "254ab3a16658a1427c580de202c2463150ccefff841232f936473cbe6044df3b5638a9e759130ac854bb809073e321ce4d9b5074aa24f4716e0f73cbd86d2471"
+    },
+    {
+      "path": "dist/useWatch.d.ts.map",
+      "sha512": "372533eb01599e7e7c5671e4fd1c5a221e4b3eb25229370de1a6d2a68f93c986abe35b4deacb3803a5db4b47e3fee5b100704dbe50abff0bf9acabd23dbf5a8b"
+    },
+    {
+      "path": "dist/useWatch.js",
+      "sha512": "44b6e0f4b6baa7cfa36a88991c5e9b6bd076267aca657126961bac87fd1f935974720220c7b4b8809a41da3f8e31c3dff7daae75810d63af1045a3847795cbbb"
+    },
+    {
+      "path": "dist/useWatch.js.map",
+      "sha512": "c6e0b923d9347fe8c160f65edc2fce9d10e7f0e5b25228d72c147f3689f5dd5cb0b7ff1fd9b6b103e396de84c2feac3058db33ec8a7793556676c21ede77f3a6"
+    },
+    {
+      "path": "dist/useWindowSize.d.ts",
+      "sha512": "bc7c9249c6a248d26f041c83f86302b595e6e30d6b997a9c94f3db3c9ef6c95564207791c7fed5a41dd1b07b8d3b2cc56613ecc2b7d20105005814d5ee067dd5"
+    },
+    {
+      "path": "dist/useWindowSize.d.ts.map",
+      "sha512": "b037c547024fde7bca5d8d4f03c93d4909c274c4268f6846f57391988655a4da9169104b35719a0df81f6733e364a838c59c82efa1cb7be179f1b70ee818a44c"
+    },
+    {
+      "path": "dist/useWindowSize.js",
+      "sha512": "a39b51d6b3efb6eb011ba77f742edc15fbc38f33e2488714fb38e8dfc478b17c8ca0b1664e5d184f030c65a17e8f278ce062f0eeaeab4d92678d463ca03cdead"
+    },
+    {
+      "path": "dist/useWindowSize.js.map",
+      "sha512": "5f245897ad8c572da21ae6d1ca3ae0d3269b00b52b8878d21ad4dfe83bdaf11603be51c4f1e7d444fe7e01e35690c46b0dcc26f63baabbaa213cfa95207b25b0"
+    },
+    {
+      "path": "package.json",
+      "sha512": "2507966b223018e4ea53b91d18c9925b94ad4c84df2223960b3ccd65c2bd1fbf8188378e2b88b00437de3f771f079d4c832ccdf9dc5c0cc88c6057ba6a278034"
+    }
+  ]
+}
