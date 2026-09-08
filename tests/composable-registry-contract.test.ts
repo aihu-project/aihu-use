@@ -39,7 +39,7 @@ describe('@aihu/use portable registry contract', () => {
     }
   })
 
-  it('does not let an LSP-only output override bypass contract drift checking', () => {
+  it('rejects redirected inputs and outputs unless an explicit fixture mode is enabled', () => {
     const fixtureRoot = resolve(import.meta.dirname, '../scripts/fixtures/composable-registry')
     const result = spawnSync(process.execPath, ['--import', 'tsx', 'scripts/gen-composable-hover-registry.ts', '--check'], {
       cwd: resolve(import.meta.dirname, '..'),
@@ -48,13 +48,28 @@ describe('@aihu/use portable registry contract', () => {
         ...process.env,
         COMPOSABLE_REGISTRY_RS: resolve(fixtureRoot, 'use_registry.rs'),
         COMPOSABLE_REGISTRY_OUT: resolve(fixtureRoot, 'expected-match.ts'),
+        COMPOSABLE_REGISTRY_CONTRACT_OUT: resolve(fixtureRoot, 'expected-match.json'),
         COMPOSABLE_USE_SRC_ROOT: resolve(fixtureRoot, 'nonexistent-src'),
-        // Deliberately omit COMPOSABLE_REGISTRY_CONTRACT_OUT. A fixture
-        // redirecting only the generated TypeScript output must still validate production's
-        // committed portable contract and fail on the fixture data.
       },
     })
     expect(result.status).not.toBe(0)
-    expect(`${result.stdout}\n${result.stderr}`).toContain('composable-registry.json is stale')
+    expect(`${result.stdout}\n${result.stderr}`).toContain('overrides are fixture-only')
+  })
+
+  it('allows fully redirected fixtures only in explicit fixture mode', () => {
+    const fixtureRoot = resolve(import.meta.dirname, '../scripts/fixtures/composable-registry')
+    const result = spawnSync(process.execPath, ['--import', 'tsx', 'scripts/gen-composable-hover-registry.ts', '--check'], {
+      cwd: resolve(import.meta.dirname, '..'),
+      encoding: 'utf8',
+      env: {
+        ...process.env,
+        COMPOSABLE_REGISTRY_FIXTURE: '1',
+        COMPOSABLE_REGISTRY_RS: resolve(fixtureRoot, 'use_registry.rs'),
+        COMPOSABLE_REGISTRY_OUT: resolve(fixtureRoot, 'expected-match.ts'),
+        COMPOSABLE_REGISTRY_CONTRACT_OUT: resolve(fixtureRoot, 'expected-match.json'),
+        COMPOSABLE_USE_SRC_ROOT: resolve(fixtureRoot, 'nonexistent-src'),
+      },
+    })
+    expect(result.status).toBe(0)
   })
 })

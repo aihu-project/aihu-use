@@ -366,6 +366,8 @@
     "gen:composable-registry": "node --import tsx scripts/gen-composable-hover-registry.ts",
     "check:composable-registry": "node --import tsx scripts/gen-composable-hover-registry.ts --check",
     "check:registry-parity": "node --import tsx scripts/check-use-registry-parity.ts",
+    "gen:release-manifest": "node scripts/release-manifest.mjs",
+    "check:release-manifest": "node scripts/release-manifest.mjs",
     "verify:pack": "node scripts/verify-pack.mjs",
     "consumer:smoke": "node scripts/consumer-smoke.mjs",
     "check:release": "node scripts/check-release.mjs",

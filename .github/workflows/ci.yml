@@ -42,6 +42,7 @@ jobs:
         run: |
           npm run check:registry-parity
           npm run check:composable-registry
+          npm run check:release-manifest
       - name: Verify exact package archive
         run: npm run verify:pack
       - name: Verify isolated consumer

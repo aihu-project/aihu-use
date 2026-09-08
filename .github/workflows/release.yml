@@ -61,6 +61,7 @@ jobs:
           npm test
           npm run check:registry-parity
           npm run check:composable-registry
+          npm run check:release-manifest
       - name: Confirm registry returns E404 only
         run: node scripts/assert-unpublished.mjs
       - name: Verify exact archive and isolated consumer

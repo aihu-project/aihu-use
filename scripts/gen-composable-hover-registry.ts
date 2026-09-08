@@ -23,9 +23,23 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, '..')
-// Overridable so check-gate-wiring.ts's negative-fixture proof can point this
-// at a fixture tree instead of the real repo (same shape as check-moon-graph.ts's
-// MOON_GRAPH_ROOT) — never set these by hand.
+// Fixture redirects are intentionally opt-in. A production/CI invocation must
+// always read the checked source tree and write the checked artifacts, so a
+// caller cannot redirect every input and output and make drift appear clean.
+const overrideNames = [
+  'COMPOSABLE_REGISTRY_OUT',
+  'COMPOSABLE_REGISTRY_CONTRACT_OUT',
+  'COMPOSABLE_USE_SRC_ROOT',
+  'COMPOSABLE_REGISTRY_RS',
+]
+const hasOverride = overrideNames.some((name) => Boolean(process.env[name]))
+const fixtureMode = process.env.COMPOSABLE_REGISTRY_FIXTURE === '1'
+if (hasOverride && !fixtureMode) {
+  throw new Error('composable registry overrides are fixture-only; set COMPOSABLE_REGISTRY_FIXTURE=1 for an isolated fixture')
+}
+if (fixtureMode && process.env.CI === 'true') {
+  throw new Error('COMPOSABLE_REGISTRY_FIXTURE is forbidden in CI/release checks')
+}
 const OUT_FILE = process.env.COMPOSABLE_REGISTRY_OUT
   ? resolve(ROOT, process.env.COMPOSABLE_REGISTRY_OUT)
   : join(ROOT, 'src/composable-registry.ts')

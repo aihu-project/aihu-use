@@ -15,10 +15,12 @@ if (taggedCommit !== workflowCommit) throw new Error('release tag does not point
 
 const defaultBranch = process.env.RELEASE_DEFAULT_BRANCH ?? 'main'
 try {
-  execFileSync('git', ['rev-parse', `origin/${defaultBranch}`], { stdio: 'ignore' })
-  execFileSync('git', ['merge-base', '--is-ancestor', taggedCommit, `origin/${defaultBranch}`])
+  const defaultTip = execFileSync('git', ['rev-parse', `origin/${defaultBranch}`], { encoding: 'utf8' }).trim()
+  if (taggedCommit !== defaultTip) {
+    throw new Error(`release tag ${tag} is not the exact origin/${defaultBranch} tip`)
+  }
 } catch {
-  throw new Error(`release tag must point at a commit on the reviewed default branch ${defaultBranch}`)
+  throw new Error(`release tag must point at the exact reviewed default branch tip origin/${defaultBranch}`)
 }
 
 console.log(`${manifest.name}@${manifest.version}: exact stable tag ${tag} at ${taggedCommit} on ${defaultBranch}`)
