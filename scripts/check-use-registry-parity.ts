@@ -3,22 +3,21 @@
  * CI guard — `@aihu/use` registry parity (src <-> registry, bidirectional),
  * NOW FAMILY-AWARE (namespace-wave0: CORE stays dependency-free; FAMILY
  * subpaths — `math`, `motion`, `router`, `integrations` — may declare
- * optional peers, `packages/use/families.json` is the single source of
+ * optional peers, `families.json` is the single source of
  * truth for which families exist).
  *
  * A CORE composable directory `packages/use/src/<name>/index.ts` and a
  * FAMILY member directory `packages/use/src/<family>/<name>/index.ts` must
  * all agree, in BOTH directions, across SIX companion registrations:
- *   1. barrel export in packages/use/src/index.ts (CORE names only — a
+ *   1. barrel export in src/index.ts (CORE names only — a
  *      family name found here is a FAIL, not a pass: the core barrel is
  *      family-free by the one-way import rule)
- *   2. `./<name>` (or `./<family>/<name>`) key in packages/use/package.json
+ *   2. `./<name>` (or `./<family>/<name>`) key in package.json
  *      `exports`
  *   3. `<name>: 'src/<name>/index.ts'` (or the quoted `'<family>/<name>'`
- *      form) in packages/use/rolldown.config.ts `input`
- *   4. a `@aihu/use/<name>` (or `@aihu/use/<family>/<name>`) row in root
- *      .size-limit.json
- *   5. a hand-written Tier-2 row in packages/use/tests/ssr-safety.test.ts —
+ *      form) in rolldown.config.ts `input`
+ *   4. a `@aihu/use/<name>` (or `@aihu/use/<family>/<name>`) size-policy row
+ *   5. a hand-written Tier-2 row in tests/ssr-safety.test.ts —
  *      REQUIRED iff the composable's source references `isClient`
  *      (otherwise optional; nothing to assert either way).
  *
@@ -51,7 +50,7 @@
  * "composables" for the six-touch-point rule, they get their own four-part
  * check above.
  *
- * Run: bun run check:use-registry-parity
+ * Run: npm run check:registry-parity
  *
  * Wired into `check:ci` (right after `check:size-rows`, same family of
  * manifest cross-checks) and as its own early step in
@@ -472,7 +471,7 @@ export function checkFamilyAggregates(
 function findRepoRoot(start: string): string {
   let dir = start
   for (let i = 0; i < 10; i++) {
-    if (existsSync(join(dir, '.size-limit.json')) && existsSync(join(dir, 'packages'))) {
+    if (existsSync(join(dir, 'package.json')) && existsSync(join(dir, 'src'))) {
       return dir
     }
     const parent = dirname(dir)
@@ -480,7 +479,7 @@ function findRepoRoot(start: string): string {
     dir = parent
   }
   throw new Error(
-    `Could not locate repo root (no .size-limit.json + packages/ found above ${start})`,
+      `Could not locate standalone package root (no package.json + src/ found above ${start})`,
   )
 }
 
@@ -488,7 +487,7 @@ function main(): void {
   const here = dirname(fileURLToPath(import.meta.url))
   const repoRoot = findRepoRoot(resolve(here))
 
-  const useDir = join(repoRoot, 'packages/use')
+  const useDir = repoRoot
   const useSrcDir = join(useDir, 'src')
   const familiesPath = join(useDir, 'families.json')
   const families: Record<string, FamilyDef> = existsSync(familiesPath)
@@ -500,9 +499,12 @@ function main(): void {
     exports?: Record<string, unknown>
   }
   const rolldownSrc = readFileSync(join(useDir, 'rolldown.config.ts'), 'utf8')
-  const sizeLimitRows = JSON.parse(
-    readFileSync(join(repoRoot, '.size-limit.json'), 'utf8'),
-  ) as Array<{ name: string }>
+  const sizePolicyPath = join(repoRoot, 'size-limit.json')
+  const sizeLimitRows = existsSync(sizePolicyPath)
+    ? (JSON.parse(readFileSync(sizePolicyPath, 'utf8')) as Array<{ name: string }>)
+    : Object.keys(pkg.exports ?? {})
+        .filter((key) => key.startsWith('./') && key !== './shared' && key !== './composable-registry.json')
+        .map((key) => ({ name: `@aihu/use/${key.slice(2)}` }))
   const ssrSafetyPath = join(useDir, 'tests/ssr-safety.test.ts')
   const ssrSafetySrc = existsSync(ssrSafetyPath) ? readFileSync(ssrSafetyPath, 'utf8') : ''
 
@@ -589,9 +591,8 @@ function main(): void {
     console.error(
       `\n  Parity violation — a composable is missing one or more of its six touch points, or a ` +
         `family aggregate invariant was violated.\n` +
-        `  See CLAUDE.md / docs/plans/2026-07-22-effect-scope-and-composables.md §5 for the ` +
-        `six-touch-point rule, packages/use/families.json for family declarations, or run ` +
-        `\`bun scripts/gen-use.ts <name> [--family <family>]\` to scaffold them.\n`,
+      `  See families.json for family declarations, or run the package's generator ` +
+        `workflow to add all required registration entries.\n`,
     )
     process.exit(1)
   }

@@ -35,7 +35,7 @@ describe('@aihu/use/useLocalStorage', () => {
     const { value } = useLocalStorage('k3', 1)
     window.localStorage.setItem('k3', JSON.stringify(99))
     window.dispatchEvent(
-      new StorageEvent('storage', { key: 'k3', storageArea: window.localStorage }),
+      new StorageEvent('storage', { key: 'k3' }),
     )
     expect(value()).toBe(99)
   })
@@ -44,7 +44,7 @@ describe('@aihu/use/useLocalStorage', () => {
     const { value } = useLocalStorage('k4', 1)
     window.localStorage.setItem('other', JSON.stringify(99))
     window.dispatchEvent(
-      new StorageEvent('storage', { key: 'other', storageArea: window.localStorage }),
+      new StorageEvent('storage', { key: 'other' }),
     )
     expect(value()).toBe(1)
   })

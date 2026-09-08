@@ -6,6 +6,11 @@
       "name": "useFixtureAlpha",
       "specifier": "@aihu/use/useFixtureAlpha",
       "description": ""
+    },
+    {
+      "name": "useFixtureBeta",
+      "specifier": "@aihu/use/useFixtureBeta",
+      "description": ""
     }
   ]
 }

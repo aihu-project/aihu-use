@@ -1,0 +1,42 @@
+{
+  "$comment": "Tuned for the standalone TypeScript package. Source, tests, release scripts, manifests, and registry artifacts remain visible; generated build output and local installs stay out of the map.",
+  "only": ["ts", "mjs", "json", "yml", "md", "rs"],
+  "exclude": ["dist/**", "coverage/**", "node_modules/**", ".release/**", "*.tgz", ".npmrc"],
+  "depth": 4,
+  "mode": "auto",
+  "guidance": {
+    "missing_extension_hints": true,
+    "ignored_extensions": ["js", "map", "d.ts"]
+  },
+  "routing": {
+    "retrieval": { "strategy": "keyword", "top_k": 4 },
+    "subsystems": [
+      {
+        "id": "registry-generator-artifact-seam",
+        "paths": ["src/**/*.ts", "src/composable-registry.ts", "composable-registry.json", "scripts/gen-composable-hover-registry.ts", "tests/composable-registry-contract.test.ts"],
+        "keywords": ["COMPOSABLE_REGISTRY", "composable-registry.json", "schemaVersion", "COMPOSABLE_REGISTRY_OUT", "COMPOSABLE_REGISTRY_CONTRACT_OUT"],
+        "docs": ["README.md"],
+        "note": "The generated TypeScript table and published JSON contract are parallel artifacts produced from source comments; codemap cannot follow generation or detect an output-only fixture override. The contract test exercises both equality and the fail-closed override path."
+      },
+      {
+        "id": "manifest-parity-seam",
+        "paths": ["src/**", "package.json", "rolldown.config.ts", "families.json", "scripts/check-use-registry-parity.ts", "tests/ssr-safety.test.ts"],
+        "keywords": ["families.json", "exports", "rolldown", "isClient", "registry parity"],
+        "docs": ["README.md"],
+        "note": "Composable source directories must match barrel exports, package exports, bundle inputs, and SSR rows by name; these are manifest and directory couplings with no import edge for the graph to resolve."
+      },
+      {
+        "id": "release-provenance-seam",
+        "paths": ["package.json", ".github/workflows/*.yml", "scripts/*.mjs", "docs/release-contract.md"],
+        "keywords": ["workspace:", "provenance", "id-token", "npm publish", "E404", "consumer", "npmrc"],
+        "docs": ["docs/release-contract.md"],
+        "note": "Release safety joins manifest identity, exact tag, registry state, tarball contents, consumer installation, npm configuration, and workflow permissions without import edges."
+      }
+    ]
+  },
+  "drift": {
+    "enabled": true,
+    "recent_commits": 10,
+    "require_docs_for": ["registry-generator-artifact-seam", "manifest-parity-seam", "release-provenance-seam"]
+  }
+}

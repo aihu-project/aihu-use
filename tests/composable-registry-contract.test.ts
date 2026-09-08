@@ -9,7 +9,7 @@ import { spawnSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { COMPOSABLE_REGISTRY } from '../packages/language-server/src/core/composable-registry.ts'
+import { COMPOSABLE_REGISTRY } from '../src/composable-registry.ts'
 
 interface RegistryContract {
   schemaVersion: number
@@ -17,7 +17,7 @@ interface RegistryContract {
   entries: typeof COMPOSABLE_REGISTRY
 }
 
-const contractPath = resolve(import.meta.dirname, '../packages/use/composable-registry.json')
+const contractPath = resolve(import.meta.dirname, '../composable-registry.json')
 const contract = JSON.parse(readFileSync(contractPath, 'utf8')) as RegistryContract
 
 describe('@aihu/use portable registry contract', () => {
@@ -41,7 +41,7 @@ describe('@aihu/use portable registry contract', () => {
 
   it('does not let an LSP-only output override bypass contract drift checking', () => {
     const fixtureRoot = resolve(import.meta.dirname, '../scripts/fixtures/composable-registry')
-    const result = spawnSync('bun', ['scripts/gen-composable-hover-registry.ts', '--check'], {
+    const result = spawnSync(process.execPath, ['--import', 'tsx', 'scripts/gen-composable-hover-registry.ts', '--check'], {
       cwd: resolve(import.meta.dirname, '..'),
       encoding: 'utf8',
       env: {
@@ -50,7 +50,7 @@ describe('@aihu/use portable registry contract', () => {
         COMPOSABLE_REGISTRY_OUT: resolve(fixtureRoot, 'expected-match.ts'),
         COMPOSABLE_USE_SRC_ROOT: resolve(fixtureRoot, 'nonexistent-src'),
         // Deliberately omit COMPOSABLE_REGISTRY_CONTRACT_OUT. A fixture
-        // redirecting only the LSP output must still validate production's
+        // redirecting only the generated TypeScript output must still validate production's
         // committed portable contract and fail on the fixture data.
       },
     })

@@ -12,14 +12,13 @@
  * table against BOTH, so a semantic divergence is a red test rather than a
  * silent one. See `docs/plans/2026-07-24-composed-tree-helper.md` §4.
  *
- * The primitives module is reached by relative path because it is internal to
- * that package (deliberately not re-exported from its `index.ts`), and it is a
- * TEST-only import: `dep-check.ts` reads `dependencies`/`peerDependencies`/
- * `optionalDependencies` and never test files, so this ships no bytes and does
- * not widen `@aihu/use`'s dependency contract.
+ * The reference implementation is kept as a test-only fixture because this
+ * standalone package cannot depend on the monorepo's `@aihu/primitives`
+ * source tree. The fixture is copied from that source-of-record module and is
+ * covered by the drift test below.
  */
 import { afterEach, describe, expect, it } from 'vitest'
-import * as primitives from '../../primitives/src/composed-tree.ts'
+import * as primitives from './fixtures/primitives-composed-tree.ts'
 import * as use from '../src/shared/composed-tree.ts'
 
 const IMPLS = [

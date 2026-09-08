@@ -2,7 +2,7 @@
 /**
  * `gen:composable-registry` — regenerate the LSP's `@aihu/use` completion +
  * hover table from each composable's own leading JSDoc in
- *      `packages/use/src/<...specifier-tail>/index.ts` — the one-line
+ *      `src/<...specifier-tail>/index.ts` — the one-line
  *      description after the `` `name` — `` prefix, already hand-written and
  *      maintained per FEL-342's ask for "hover docs (signature + one-line
  *      purpose)".
@@ -10,16 +10,14 @@
  * Run after editing either source (adding a composable via `gen:use`, or
  * editing a composable's doc comment):
  *
- *   bun scripts/gen-composable-hover-registry.ts          # regenerate
- *   bun scripts/gen-composable-hover-registry.ts --check  # CI: fail if stale
+ *   npm run gen:composable-registry          # regenerate
+ *   npm run check:composable-registry        # CI: fail if stale
  *
- * Emits packages/language-server/src/core/composable-registry.ts — checked
- * in (a real npm consumer of `@aihu/language-server` doesn't have
- * `packages/use/src` on disk, so this can't be read at the LSP's runtime).
+ * Emits src/composable-registry.ts and composable-registry.json. The TypeScript
+ * table is useful to compiler/LSP integrations while the JSON file is the
+ * portable published contract for consumers in other repositories.
  */
-import { spawnSync } from 'node:child_process'
-import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
-import { tmpdir } from 'node:os'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { basename, dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -30,13 +28,13 @@ const ROOT = resolve(__dirname, '..')
 // MOON_GRAPH_ROOT) — never set these by hand.
 const OUT_FILE = process.env.COMPOSABLE_REGISTRY_OUT
   ? resolve(ROOT, process.env.COMPOSABLE_REGISTRY_OUT)
-  : join(ROOT, 'packages/language-server/src/core/composable-registry.ts')
+  : join(ROOT, 'src/composable-registry.ts')
 const CONTRACT_FILE = process.env.COMPOSABLE_REGISTRY_CONTRACT_OUT
   ? resolve(ROOT, process.env.COMPOSABLE_REGISTRY_CONTRACT_OUT)
-  : join(ROOT, 'packages/use/composable-registry.json')
+  : join(ROOT, 'composable-registry.json')
 const USE_SRC_ROOT = process.env.COMPOSABLE_USE_SRC_ROOT
   ? resolve(ROOT, process.env.COMPOSABLE_USE_SRC_ROOT)
-  : join(ROOT, 'packages/use/src')
+  : join(ROOT, 'src')
 
 interface ComposableEntry {
   name: string
@@ -59,7 +57,7 @@ function parseRegistry(): { name: string; specifier: string }[] {
     }))
   }
   const srcRoot = resolve(USE_SRC_ROOT)
-  const familiesPath = join(ROOT, 'packages/use/families.json')
+  const familiesPath = join(ROOT, 'families.json')
   const families = existsSync(familiesPath)
     ? ((
         JSON.parse(readFileSync(familiesPath, 'utf8')) as {
@@ -152,7 +150,7 @@ function main(): void {
 
   // This JSON is the portable contract. It is shipped by @aihu/use so the
   // language server and compiler can validate/consume the registry after the
-  // package leaves this monorepo; neither consumer needs packages/use/src.
+  // package is consumed independently; downstream tools need only this artifact.
   const contract = `${JSON.stringify(
     {
       schemaVersion: 1,
@@ -165,12 +163,12 @@ function main(): void {
 
   const lines: string[] = []
   lines.push('/**')
-  lines.push(' * packages/language-server/src/core/composable-registry.ts')
+  lines.push(' * src/composable-registry.ts')
   lines.push(' *')
   lines.push(' * GENERATED — do not hand-edit. Source of truth:')
-  lines.push(' *   packages/use/src/<name>/index.ts (names, specifiers, and doc comments)')
+  lines.push(' *   src/<name>/index.ts (names, specifiers, and doc comments)')
   lines.push(' *')
-  lines.push(' * Regenerate: bun scripts/gen-composable-hover-registry.ts')
+  lines.push(' * Regenerate: npm run gen:composable-registry')
   lines.push(' * (FEL-342 / #427 follow-up — LSP composable-awareness)')
   lines.push(' */')
   lines.push('')
@@ -192,30 +190,10 @@ function main(): void {
   lines.push('')
   const output = lines.join('\n')
 
-  // Biome's formatter (line wrapping, quote style) is the actual style this
-  // repo enforces via `check:lint` — write raw, then let it reformat, so the
-  // committed file always matches what `bun run check:lint` expects rather
-  // than this script's own guess at formatting.
-  // `--check` must be READ-ONLY. It used to write OUT_FILE, format it in
-  // place, compare, then restore — which left the tracked file dirty if the
-  // process died between write and restore, and printed a confusing
-  // "Fixed 1 file" into every CI run for a step that is supposed to inspect,
-  // not mutate. Format a temp copy instead; the real file is only written on a
-  // genuine (non-check) regeneration.
-  // The temp copy MUST keep a .ts extension — biome picks its formatter from
-  // the file extension, and a `.tmp` name is left unformatted, which made the
-  // comparison report a false 'stale'. Placed in the OS temp dir so a crash
-  // cannot leave a stray .ts file inside the package for tsc to pick up.
-  const target = check ? join(tmpdir(), `aihu-composable-registry.check.ts`) : OUT_FILE
-  writeFileSync(target, output)
-  spawnSync('bunx', ['biome', 'format', '--write', target], { stdio: 'inherit' })
-
   if (check) {
-    const formatted = readFileSync(target, 'utf8')
-    rmSync(target, { force: true })
-    if (existing !== formatted) {
+    if (existing !== output) {
       console.error(
-        `[gen-composable-registry] ${basename(OUT_FILE)} is stale — run: bun scripts/gen-composable-hover-registry.ts`,
+        `[gen-composable-registry] ${basename(OUT_FILE)} is stale — run: npm run gen:composable-registry`,
       )
       process.exit(1)
     }
@@ -227,7 +205,7 @@ function main(): void {
     }
     if (existingContract !== contract) {
       console.error(
-        `[gen-composable-registry] ${basename(CONTRACT_FILE)} is stale — run: bun scripts/gen-composable-hover-registry.ts`,
+        `[gen-composable-registry] ${basename(CONTRACT_FILE)} is stale — run: npm run gen:composable-registry`,
       )
       process.exit(1)
     }
@@ -235,6 +213,7 @@ function main(): void {
     return
   }
 
+  writeFileSync(OUT_FILE, output)
   writeFileSync(CONTRACT_FILE, contract)
   console.log(
     `[gen-composable-registry] wrote ${entries.length} entries to ${OUT_FILE} and ${CONTRACT_FILE}`,
