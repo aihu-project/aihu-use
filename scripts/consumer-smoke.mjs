@@ -7,7 +7,7 @@ const archive = process.argv[2]
 if (!archive) throw new Error('usage: npm run consumer:smoke -- /absolute/path/package.tgz')
 const dir = mkdtempSync(join(tmpdir(), 'aihu-use-consumer-'))
 execFileSync('npm', ['init', '-y'], { cwd: dir, stdio: 'ignore' })
-execFileSync('npm', ['install', '--no-audit', '--no-fund', resolve(archive)], { cwd: dir, stdio: 'inherit' })
+execFileSync('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', resolve(archive)], { cwd: dir, stdio: 'inherit' })
 // Optional peers are deliberately not pulled into the published package. Add
 // the repository's built peer fixtures to this disposable consumer so every
 // public subpath can be imported and evaluated, including integrations that

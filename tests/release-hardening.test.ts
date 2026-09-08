@@ -1,5 +1,5 @@
 import { execFileSync, spawnSync } from 'node:child_process'
-import { cpSync, mkdirSync, mkdtempSync, writeFileSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
@@ -9,6 +9,7 @@ const gate = join(root, 'scripts/check-oidc-auth.mjs')
 const releaseManifestGate = join(root, 'scripts/release-manifest.mjs')
 const packGate = join(root, 'scripts/verify-pack.mjs')
 const releaseGate = join(root, 'scripts/check-release.mjs')
+const consumerGate = join(root, 'scripts/consumer-smoke.mjs')
 
 function isolated() {
   const dir = mkdtempSync(join(tmpdir(), 'aihu-use-auth-'))
@@ -169,5 +170,32 @@ describe('release artifact and branch gates', () => {
       expect(result.status).not.toBe(0)
       expect(`${result.stdout}\n${result.stderr}`).toContain('PACK_ROOT is test-only')
     }
+  })
+
+  it('installs the consumer tarball with lifecycle scripts disabled', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'aihu-use-consumer-tarball-'))
+    for (const file of ['package.json', 'README.md', 'LICENSE', 'composable-registry.json']) {
+      cpSync(join(root, file), join(dir, file))
+    }
+    cpSync(join(root, 'dist'), join(dir, 'dist'), { recursive: true })
+    const packagePath = join(dir, 'package.json')
+    const packageManifest = JSON.parse(readFileSync(packagePath, 'utf8'))
+    packageManifest.scripts = {
+      ...packageManifest.scripts,
+      postinstall: "node -e \"require('node:fs').writeFileSync(process.env.CONSUMER_SMOKE_MARKER, 'ran')\"",
+    }
+    writeFileSync(packagePath, `${JSON.stringify(packageManifest, null, 2)}\n`)
+    const packed = JSON.parse(execFileSync('npm', ['pack', '--json', '--ignore-scripts', '--pack-destination', dir], {
+      cwd: dir,
+      encoding: 'utf8',
+    }))[0]
+    const marker = join(dir, 'postinstall-ran')
+    const result = spawnSync(process.execPath, [consumerGate, join(dir, packed.filename)], {
+      cwd: root,
+      env: { ...process.env, CONSUMER_SMOKE_MARKER: marker },
+      encoding: 'utf8',
+    })
+    expect(result.status).toBe(0)
+    expect(existsSync(marker)).toBe(false)
   })
 })
