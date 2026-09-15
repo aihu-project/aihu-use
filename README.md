@@ -65,9 +65,12 @@ Two target rules shared by all sensors:
   `() => document.getElementById('x')` runs once and never re-runs — it
   looks reactive but isn't.
 
-More are coming — this landing establishes the pattern (packaging, per-entry
-size rows, SSR safety, getter return shape) for the curated ~25 set; see
-`docs/plans/2026-07-22-effect-scope-and-composables.md` §5.
+More are coming — this landing established the pattern (packaging, per-entry
+size rows, SSR safety, getter return shape); see
+`docs/plans/2026-07-22-effect-scope-and-composables.md` §5. The set has since
+grown past the original curated ~25 to 62 composables — see
+`composable-registry.json` (or `./composable-registry.json` at the package
+root) for the full, current list with one-line descriptions per entry.
 
 ### Registry contract for tooling
 
@@ -226,8 +229,8 @@ bun add @aihu/use
 <!-- regenerate: bun scripts/sync-readme.ts (also runs in pre-commit + CI) -->
 
 - [@aihu/signals](https://github.com/aihu-project/aihu-dom)
-- [@aihu/primitives](../primitives)
-- [Aihu framework root](../../README.md)
+- [@aihu/primitives](https://github.com/aihu-project/aihu-primitives)
+- [Aihu framework](https://github.com/aihu-project/aihu)
 
 <sub><i>Auto-generated against `@aihu/use@2.0.1`.</i></sub>
 
@@ -238,7 +241,7 @@ bun add @aihu/use
 <!-- BEGIN_AUTOGEN: license -->
 <!-- regenerate: bun scripts/sync-readme.ts (also runs in pre-commit + CI) -->
 
-MIT — see [LICENSE](../../LICENSE).
+MIT — see [LICENSE](./LICENSE).
 
 <sub><i>Auto-generated against `@aihu/use@2.0.1`.</i></sub>
 
