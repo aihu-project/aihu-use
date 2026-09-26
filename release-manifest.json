@@ -24,6 +24,22 @@
       "sha512": "6b75f58fba120dee1d1e9e65761a7c0fd9f90946c11a4fbc39d1f06da99e3c8b6291ab44b1995b120e0a9b8c903bfe196e2979762b566bb85438f7e567697a24"
     },
     {
+      "path": "dist/createFocusTrap.d.ts",
+      "sha512": "1a0707c1795d9f2db4494e582bee36a03acd8688a0b243c5a3a86fc8696932c06275899a31c65f607245bf5cc7bd525b0a53a58c6813a7ac9b7063de360f55f8"
+    },
+    {
+      "path": "dist/createFocusTrap.d.ts.map",
+      "sha512": "879823e7106df161fa47b268bf5dd242d09e3bae78ad0e0a5425eba60f58c9812a92ef2b2411a71139a56c5883c589c69ef72a0d8dc53865b9221950486db1de"
+    },
+    {
+      "path": "dist/createFocusTrap.js",
+      "sha512": "e65c5610c78f7ef6eedc599554c010c27d2bdc7c30335b004cf50b73d4bc6ab914e1fa6bab6e1dfdc41e7a6da338d3609213980d47d07fd7c8bd5738ac65ecdb"
+    },
+    {
+      "path": "dist/createFocusTrap.js.map",
+      "sha512": "55c6d262f5d772ca69de1a4ec702a460a933d2a0f9f7857514e388b08946fe28c36d575c1599c171179e052433d0180ae47c75466a2d30a8aa87361a4bd8879a"
+    },
+    {
       "path": "dist/index-CNA0_MAi.d.ts",
       "sha512": "cbb3a806db30f9a54901aeb24e668a3a60eba154ed49d70c94900c04a2e2d7a0fc491e4c44cf8c6b81cebb55e0bd9e42583c6266672d2de2440d0e2fb4ca2d4a"
     },
@@ -33,11 +49,11 @@
     },
     {
       "path": "dist/index.d.ts",
-      "sha512": "3bfc6bac16b5b858b3e42037a823194840d7e8bf6330b07ac37b370b4d9b4bf813be75c67bb1e1d9e55f8b38d6b14f4c289e74bb9d3b46870a45aa3b89f72b2b"
+      "sha512": "5749fa63883da064e0ef1db4fb3a7a50995ac73e824256ded15b0acdbfde7f019a45f1fdee26ec3536f02b8602132171181045baa1758818534e24f9269ee271"
     },
     {
       "path": "dist/index.js",
-      "sha512": "aecebf9e7a70fe9c5cdef146dfd9005f36c93956ab7447cdb28ce241e3eb2e8c58e753ba24e215f80129f2e43c3728087e6c088e2dfb97fb5368666dd70eb26a"
+      "sha512": "b745f7cae6abad3ee4d5e572ff1f3d2fc3e121a2fe2a0c4deb8a32cb0f26289a1e98f396b21d9342fd7a431484c76531139ed593f6157c06173c2513a22f68e6"
     },
     {
       "path": "dist/integrations/useJwt.d.ts",
@@ -1245,7 +1261,7 @@
     },
     {
       "path": "package.json",
-      "sha512": "2507966b223018e4ea53b91d18c9925b94ad4c84df2223960b3ccd65c2bd1fbf8188378e2b88b00437de3f771f079d4c832ccdf9dc5c0cc88c6057ba6a278034"
+      "sha512": "b9c9ef7ba7738351c7f1a1c208cdecd7df1cb3d6e02e430f35df3518f020ce0684b1691d8c08adbc099fac0592ed833877518dbb8173c2d68941fd78b58aadda"
     }
   ]
 }

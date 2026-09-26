@@ -19,6 +19,12 @@ export {
   tryOnScopeDispose,
   unrefElement,
 } from './shared/index.ts'
+export type {
+  CreateFocusTrapOptions,
+  FocusTarget,
+  FocusTrap,
+} from './createFocusTrap/index.ts'
+export { createFocusTrap } from './createFocusTrap/index.ts'
 export type { UseActiveElementReturn } from './useActiveElement/index.ts'
 export { useActiveElement } from './useActiveElement/index.ts'
 export type { UseAsyncOptions, UseAsyncReturn } from './useAsync/index.ts'

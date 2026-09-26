@@ -91,7 +91,16 @@ function parseRegistry(): { name: string; specifier: string }[] {
           continue
         }
         const family = tail ? tail.split('/')[0] : undefined
-        if (!family || families[family]?.autoImport === true) {
+        // This registry is the compiler's AUTO-IMPORT table (bare call name
+        // -> specifier), so every entry must be a `use`-prefixed bare name —
+        // the same collision-avoidance rule `REGISTRY_EXEMPT` documents in
+        // check-use-registry-parity.ts. A composable named otherwise (e.g.
+        // `createFocusTrap`, an imperative activate/deactivate handle rather
+        // than a reactive-getter hook) still gets its own subpath export; it
+        // just isn't auto-import-eligible, so it's excluded here rather than
+        // registered under the wrong name.
+        const autoImportEligible = /^use[A-Z]/.test(entry.name)
+        if (autoImportEligible && (!family || families[family]?.autoImport === true)) {
           entries.push({ name: entry.name, specifier: `@aihu/use/${nextTail}` })
         }
         continue

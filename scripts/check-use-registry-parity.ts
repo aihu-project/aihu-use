@@ -90,7 +90,13 @@ export function loadFamilies(familiesJsonSrc: string): Record<string, FamilyDef>
  * derived from its family's `autoImport` flag (see `registryRequirement`),
  * never hand-listed here.
  */
-export const REGISTRY_EXEMPT = new Set<string>()
+export const REGISTRY_EXEMPT = new Set<string>([
+  // Imperative activate/deactivate handle (mirrors @aihu/primitives'
+  // createFocusTrap), not a reactive-getter `useX` hook — excluded from
+  // auto-import by the same rule the hover-registry generator applies
+  // (see gen-composable-hover-registry.ts's `autoImportEligible` check).
+  'createFocusTrap',
+])
 
 // ---------- Per-source discovery / parsing ----------
 

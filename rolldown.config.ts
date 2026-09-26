@@ -25,6 +25,7 @@ export default defineConfig({
   input: {
     index: 'src/index.ts',
     shared: 'src/shared/index.ts',
+    createFocusTrap: 'src/createFocusTrap/index.ts',
     useActiveElement: 'src/useActiveElement/index.ts',
     useAsync: 'src/useAsync/index.ts',
     useAsyncAbortable: 'src/useAsyncAbortable/index.ts',
@@ -110,13 +111,18 @@ export default defineConfig({
   },
   plugins: [dts()],
   // @aihu/signals stays external so each composable's dist measures only its
-  // own code (matching the `.size-limit.json` ignore lists). Every declared
-  // optional peer (packages/use/package.json `peerDependencies`) is external
-  // too, derived from the manifest so the two can never drift — peers are
-  // installed as devDependencies for typecheck/test, so WITHOUT this they
-  // would be silently inlined into whichever family bundle imports them.
-  // Harmless today: `peerDependencies` is empty until a family's first
-  // peer-bearing composable lands.
+  // own code (matching the `.size-limit.json` ignore lists). @aihu/primitives
+  // (createFocusTrap's sole regular dependency, pulling in its composed-tree
+  // substrate) is external for the same reason — it's a real, independently
+  // versioned package, not vendored code, and bundling it would inflate
+  // createFocusTrap's size row with code a consumer likely already has
+  // elsewhere in their graph. Every declared optional peer (packages/use/
+  // package.json `peerDependencies`) is external too, derived from the
+  // manifest so the two can never drift — peers are installed as
+  // devDependencies for typecheck/test, so WITHOUT this they would be
+  // silently inlined into whichever family bundle imports them. Harmless
+  // today: `peerDependencies` is empty until a family's first peer-bearing
+  // composable lands.
   //
   // Package-boundary-aware, not a bare array: an array is exact-match only,
   // so a subpath import (`@aihu/signals/lifecycle`) would fail to match
@@ -125,7 +131,7 @@ export default defineConfig({
   // the package-name boundary — exact name or `<name>/...` — never a bare
   // prefix (which would also admit an unrelated package sharing a prefix).
   external: (id: string) =>
-    ['@aihu/signals', ...Object.keys(pkg.peerDependencies ?? {})].some(
+    ['@aihu/signals', '@aihu/primitives', ...Object.keys(pkg.peerDependencies ?? {})].some(
       (name) => id === name || id.startsWith(`${name}/`),
     ),
 })
