@@ -1,5 +1,11 @@
 # @aihu/use
 
+## 2.0.1
+
+### Patch Changes
+
+- Extracted `@aihu/use` into its own repository, hardened the release manifest and standalone consumer contract, and replaced workspace-only dependency metadata with published semver ranges.
+
 ## 2.0.0
 
 ### Patch Changes
