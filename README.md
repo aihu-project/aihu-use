@@ -68,7 +68,7 @@ Two target rules shared by all sensors:
 More are coming — this landing established the pattern (packaging, per-entry
 size rows, SSR safety, getter return shape); see
 `docs/plans/2026-07-22-effect-scope-and-composables.md` §5. The set has since
-grown past the original curated ~25 to 62 composables — see
+grown past the original curated ~25 to 71 composables — see
 `composable-registry.json` (or `./composable-registry.json` at the package
 root) for the full, current list with one-line descriptions per entry.
 
